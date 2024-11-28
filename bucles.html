@@ -4,53 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto JavaScript</title>
-    <link rel="stylesheet" href="styles/styl.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <style>
-
+    .comp{
+        display: flex;
+    }
 </style>
 <body>
+    <nav class="navPaginas">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="variables.html">Variables</a></li>
+            <li><a href="bucles.html">Bucles</a></li>
+            <li><a href="operadores.html">Operadores</a></li>
+            <li><a href="objetos_json.html">Objetos JSON</a></li>
+        </ul>
+    </nav>
     <header>
         
     </header>
     <main>
         <h2>BUCLES</h2>
         <p>En JavaScript, los bucles o iteraciones son estructuras de control que permiten ejecutar un bloque de código de manera repetida, dependiendo de una condición.</p>
-        <div><h3>Tipos de Bucles</h3>
+        <section><h3>Tipos de Bucles</h3>
         <ul>
             <li>For</li>
                 <p>Es el bucle más común y se utiliza cuando sabes de antemano cuántas veces necesitas iterar.</p>
-                <p>
-                    EXAMPLE
-                </p>
+                <pre id="for">
+                    <code>
+                        for (var i = 0; i < 9; i++){
+                            console.log(i)
+                        }
+                    </code>
+                </pre>
                 <p>Explicación</p>
                 <ul>
-                    <li>Inicialización: Establece la variable de inicio</li>
-                    <li>Inicialización: Establece la variable de inicio</li>
-                    <li>Inicialización: Establece la variable de inicio</li>
+                    <li>var i = 0:</li>
+                    <li>i < 9: La condición que se evalúa antes de cada iteración</li>
+                    <li>i++: Modifica la variable en cada paso</li>
                 </ul>
             <li>While</li>
-            <p>Este bucle ejecuta el código mientras una condición sea verdadera. El número de iteraciones no está necesariamente determinado de antemano.</p>
-            <p>
-                EXAMPLE
-            </p>
+            <p>Este bucle ejecuta el código mientras una condición sea verdadera. El número de iteraciones no necesita estar predeterminado.</p>
+            <pre>
+                <code>
+                    let i = 1;
+                    while (i<= 5){
+                        console.log(i)
+                        i++
+                    }
+                </code>
+            </pre>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
+                <li>let i </li>
+                <li>while (i<= 5): Ejecuta mientras i sea menor que 5</li>
+                <li>i++: Incrementa i en 1</li>
             </ul>
             <li>do...while</li>
             <p>Similar al bucle while, pero en este caso la condición se evalúa después de ejecutar el código. Esto asegura que el código se ejecute al menos una vez, incluso si la condición es falsa desde el principio.
             </p>
-            <p>
-                EXAMPLE
-            </p>
+            <pre>
+                <code>
+                    let i = 1;
+                    do{
+                        console.log(i);
+                        i++;
+                    } 
+                    while (i<=5);
+                </code>
+            </pre>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
+                <li>do: Realiza el bucle al menos una vez</li>
+                <li>while (i<=5): Hasta que se cumpla una vez.</li>
             </ul>
             <li>for...in</li>
             <p>Este bucle se utiliza para iterar sobre las propiedades de un objeto. Es útil cuando necesitas recorrer las claves de un objeto.</p>
@@ -59,9 +86,9 @@
             </p>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
             </ul>
             <li>for...of</li>
             <p>Este bucle se usa para iterar sobre los elementos de un array o cualquier objeto iterable.</p>
@@ -70,10 +97,11 @@
             </p>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
             </ul>
+            <h4>Control de flujo dentro de los bucles</h4>
             <li>Continue</li>
             <p>Omite la iteración actual y continúa con la siguiente.</p>
             <p>
@@ -81,9 +109,9 @@
             </p>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
             </ul>
             <li>Break</li>
             <p>ale de un bucle inmediatamente, independientemente de si la condición de continuación se ha cumplido.</p>
@@ -92,13 +120,102 @@
             </p>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
-                <li>Inicialización: Establece la variable de inicio</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
+                <li>Inicialización:</li>
             </ul>
         </ul>
-        </div>
+        </section>
+        <section><h3>Maps</h3>
+            <ul>
+                <li><p>Un mapa contiene pares de valores llave <em>"Key-Value"</em> las cuales pueden ser de cualquier tipo.</p></li>
+                <li><p>Un mapa recuerda el orden original de inserción de las llaves.</p></li>
+                <li><p>Se puede añadir <em>"set"</em> y quitar <em>"delete"</em> elementos de un mapa.</p></li>
+            </ul>
+            <p>EXAMPLE</p>
+            <h3>Diferencias entre Maps y Objetos JS</h3>
+            <div class="comp">
+                <ul>Maps
+                    <li>Iterable directamente</li>
+                    <li>Tiene una propiedad de tamaño</li>
+                    <li>Las key puede ser de cualquiertipo de dato</li>
+                    <li>Las key están ordenadas por orden de inserción</li>
+                    <li>No tiene keys predeterminadas</li>
+                </ul>
+                <ul>Objetos
+                    <li>No se puede iterar directamente</li>
+                    <li>No tiene una propiedad de tamaño</li>
+                    <li>Las keys deben ser strings o simbolos</li>
+                    <li>Las keys no están ordenadas</li>
+                    <li>Tiene keys predeterminadas</li>
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <th>Metodo</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>new Map()</td>
+                    <td>Crea un nuevo mapa</td>
+                </tr>
+                <tr>
+                    <td>set()</td>
+                    <td>Dispone un value para una key</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td>Devuelve el numero de elementos en un Map</td>
+                </tr>
+                <tr>
+                    <td>clear()</td>
+                    <td>Borra todos los elementos de un mapa</td>
+                </tr>
+                <tr>
+                    <td>delete()</td>
+                    <td>Borra un elemento específico</td>
+                </tr>
+                <tr>
+                    <td>entries()</td>
+                    <td>Devuelve un iterador con los pares [key, value]</td>
+                </tr>
+                <tr>
+                    <td>get()</td>
+                    <td>Toma un value para una key</td>
+                </tr>
+                <tr>
+                    <td>groupBy()</td>
+                    <td>Agrupa elementos de objetos acorde con los valores de respuesta devueltos</td>
+                </tr>
+                <tr>
+                    <td>has()</td>
+                    <td>Devuelve true si la key existe en el Map</td>
+                </tr>
+                <tr>
+                    <td>keys()</td>
+                    <td>Devuelve un iterador con la key del Map</td>
+                </tr>
+                <tr>
+                    <td>values()</td>
+                    <td>Devuelve un iterador con el value</td>
+                </tr>
+                <tr>
+                    <td>foreach()</td>
+                    <td><p>Convoca una respuesta por cada par key/value</p>
+                    <p>Convoca una función por cada elemento</p>
+                    <p>No cambia el Map original</p></td>
+                </tr>
+            </table>
+            <pre>
+                <code><p>Tiene este aspecto:</p>
+                    map.forEach(callback)
+                </code>
+            </pre>
+        </section>
     </main>
+    <footer>
+        <button class="but"><a href="index.html">Volver al índice</a></button>
+    </footer>
     
     <script>
         

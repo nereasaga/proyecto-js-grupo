@@ -7,25 +7,117 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Proyecto de investigación JavaScript</h1>
-        <h2>Variables</h2>
-    </header>
-    <section>
+    <nav class="navPaginas">
         <ul>
-            <li><a href="variables.html">variables</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="variables.html">Variables</a></li>
             <li><a href="bucles.html">Bucles</a></li>
-            <li><a href="">Operadores</a></li>
+            <li><a href="operadores.html">Operadores</a></li>
             <li><a href="objetos_json.html">Objetos JSON</a></li>
         </ul>
-    </section>
+    </nav>
+    <header>
+    </header>
        <main>
-        <h2>que son las variables</p>
-            <p>Las variables son contenedores que almacenan información que puede ser utilizada y modificada durante la ejecución de un programa.
-                 <br>Actúan como etiquetas que hacen referencia a un valor, permitiendo que el código sea más dinámico y fácil de entender.<br>
-            existen tres palabras clave principales para declarar variables: var, let y const. Cada una con características específicas que se utilizan en diferentes escenarios.</p>
+        <h2>Variables</h2>
 
-       </main>
+    <h3>Existen tres palabras clave principales para declarar variables: var, let y const.</h3>
+
+        <p>var: Se utiliza para declarar e inicializar variables con acceso en todo el programa. Estas pueden cambiar su valor y se elevan al inicio del programa.
+           let: Declaran variables accesibles solo dentro de su ámbito, como en funciones. Estas no se elevan al inicio del programa.
+          const: Se utiliza para declarar constantes cuyo valor no puede modificarse. 
+          Al igual que las variables let las constantes no se elevan al inicio del programa</p>
+
+       <h3>Ejemplo</h3> 
+              
+                   let nombre = "Carlos";
+                    const edad = 30;
+                    var pais = "España";
+            
+
+           <p>En este ejemplo nombre se declara con let para que su valor pueda cambiar, edad con const para mantenerla inmutable,
+             y pais con var, aunque se recomienda el uso de let o const.</p>
+
+        <h2>Tipos de Variables</h2>
+          <p>Número (Number): Almacena valores numéricos, ya sean enteros o decimales.
+
+            Cadena (String): Contiene secuencias de caracteres, como texto.
+
+            Booleano (Boolean): Representa valores verdaderos (true) o falsos (false).
+
+            Nulo (Null): Indica que una variable no tiene valor o está vacía.
+
+            Indefinido (Undefined): Cuando una variable se ha declarado pero no se le ha asignado un valor.
+
+            Arreglo (Array): Almacena una lista ordenada de elementos.
+
+            Objeto (Object): Estructura de datos que puede contener propiedades y métodos.
+
+            Función (Function): Un bloque de código reutilizable que puede ser llamado.
+
+            Símbolo (Symbol): Identificador único utilizado para propiedades de objetos.
+
+            BigInt: Para manejar números enteros grandes.</p>
+            
+
+     <h3>Declaracion</h3>
+
+          <p>puedes declarar una variable utilizando las palabras clave let, const o var:
+
+           let: Se utiliza para declarar variables cuyo valor puede cambiar.
+             let nombre ="pedro"
+             nombre="Carlos" // el valor puede ser reasignado
+
+          const: Se utiliza para declarar variables cuyo valor no puede cambiar (constantes).
+              const pi = 3.1416;
+              // pi= 3.14; // esto daria error, porque el valor no puede cambiar//
+
+          var (antiguo): Era el método tradicional, pero hoy se usa menos debido a su comportamiento menos predecible en cuanto a alcance.
+               var edad= 20;
+               edad=21 // se puede reasignar//</p>
+        
+        <h3>ambito de variables</h3>
+
+        <p>Cuando declaras una variable fuera de cualquier función, se denomina variable global, 
+        porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función,
+         se llama variable local, porque solo está disponible dentro de esa función.</p>
+
+       <h3>Ejemplo</h3> 
+        
+                <p> variable global
+            if (true) {
+                var x = 5;
+                        }
+                console.log(x); // x es 5</p>
+                        
+                <p>variable local
+
+                if (true) {
+                    let y = 5;
+                }
+                console.log(y); // ReferenceError: y no está definida</p>
+    
+     <h3>asignacion de variables</h3>
+
+        <p>La asignación de valores a una variable se realiza con el operador =:</p>
+        <h3>Ejemplo</h3> 
+
+        <p> let edad = 30; // asigna 30 a la variable edad//
+            let nombre= "juan" // asigna "juan" a la variable nombre //</p>
+
+    <h3>instancia de una variable</h3> 
+       <p>El concepto de instancia de una variable se refiere a la creación de un valor único o de una estructura de datos que se puede usar. 
+        Aunque el término "instancia" suele asociarse más con objetos y clases (en programación orientada a objetos), 
+        en JavaScript una variable es una "instancia" de un valor en particular en el momento en que se le asigna un valor.</p>
+
+        <h3>Ejemplo</h3> 
+         
+        <p>let persona ={nombre: "juan", edad: 30};</p>
+
+ </main>
+       <footer>
+        <button class="but"><a href="index.html">Volver al índice</a></button>
+    </footer>
     <script>
       
     </script>

@@ -4,15 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplos de Objetos JSON</title>
+    <link rel="stylesheet" href="styles/style.css">
    </head>
+   <style>
+    main {
+        display: block
+    }
+   </style>
 <body>
-    <header>
-       <h2>Ejemplos de Objetos JSON</h2>
-    </header>
+    <nav class="navPaginas">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="variables.html">Variables</a></li>
+            <li><a href="bucles.html">Bucles</a></li>
+            <li><a href="operadores.html">Operadores</a></li>
+            <li><a href="objetos_json.html">Objetos JSON</a></li>
+        </ul>
+    </nav>
     <main>
-    </main>
-    <script>
+    <h2>Objetos JSON en JavaScript</h2>
+    <div class="Explicacion">   
+        <h3>¿Qué es un objeto JSON?</h3>
+        <p>JSON (JavaScript Object Notation) es un formato ligero y de texto para almacenar e intercambiar datos.
 
+            Es utilizado principalmente para representar datos estructurados de manera sencilla, en formato de clave-valor, es fácil de leer y escribir tanto para los humanos como para las máquinas.
+            </p>        
+    </div>
+        <div class="ejemplos">
+            <!-- Aportes: etiqueta <pre></pre> muestra tal y como aparece en el codigo de origen sin formato de css.
+               etiqueta <code></code> se utiliza para resaltar una porción específica de código dentro de un texto-->
+            <pre> <code>              
+                {"nombre": "Juan",
+                 "edad": 30,
+                 "esEstudiante": false,
+                 -----------anidado------------
+                 "dirección": {
+                   "calle": "Calle Falsa 123",
+                   "ciudad": "Bilbao",},
+                 ------------arreglo------------
+                 "teléfonos": ["123456789", "987654321"]
+               }
+            </code></pre>
+            
+            <p><strong>Explicación</strong>: En este objeto, tenemos tres propiedades:</p>
+            <ul>
+                <li><strong> "nombre"</strong>: Es una cadena de texto con el valor "Juan".</li>
+                <li><strong> "edad"</strong>: Es un número con el valor 30.</li>
+                <li><strong> "esEstudiante"</strong>: Es un valor booleano (true o false), en este caso es <code>true</code></li>
+            </ul>
+            <button class="butJS" onclick="mostrarJsonStringify()">Mostrar JSON.stringify()</button>
+        </div>
+        
+        <!-- <div class="ejemplos">
+            <h3>Ejemplo 2: Objeto JSON con un objeto anidado</h3>
+            <p>Este objeto JSON contiene una propiedad que es otro objeto (un objeto anidado):</p>
+        <pre><code>
+            {"nombre": "Juan",
+            "edad": 30,
+            "esEstudiante": false,
+            -----------anidado------------
+            "dirección": {
+              "calle": "Calle Falsa 123",
+              "ciudad": "Bilbao",},
+            ------------arreglo------------
+            "teléfonos": ["123456789", "987654321"]
+          }
+        </code></pre>
+        <p>Explicación: En este caso, la propiedad <strong>"direccion"</strong> es un objeto dentro del objeto principal:</p>
+        <ul>
+            <li><strong>"calle"</strong>: Una cadena de texto.</li>
+            <li><strong>"ciudad"</strong>: Otra cadena de texto que indica la ciudad.</li>
+        </ul>
+        <button class="butJS" onclick="mostrarJsonStringify()">Mostrar JSON.stringify()</button>
+    </div>   -->
+
+    <div class="ejemplos">
+        <h3>Ejemplo 3: Objeto JSON con un arreglo</h3>
+        <p>Este objeto JSON incluye un arreglo (lista) dentro de la propiedad <strong>"telefonos"</strong>:</p>
+        <pre><code>
+            {"nombre": "Juan",
+            "edad": 30,
+            "esEstudiante": false,
+            -----------anidado------------
+            "dirección": {
+              "calle": "Calle Falsa 123",
+              "ciudad": "Bilbao",},
+            ------------arreglo------------
+            "teléfonos": ["123456789", "987654321"]
+          }
+        </code></pre>
+        <button class="butJS" onclick="mostrarJsonParse()">Mostrar JSON.parse()</button>
+        <p><strong>Explicación</strong>: En este caso, la propiedad <strong>"telefonos"</strong> es un arreglo que contiene dos números de teléfono como cadenas de texto.</p>
+   
+    </main>
+    <footer>
+        <button class="but"><a href="index.html">Volver al índice</a></button>
+    </footer>
+    <script>
+// Ejemplo 1: Convertir un objeto a JSON con JSON.stringify()
+function mostrarJsonStringify() {
+            let persona = {
+                nombre: "Juan",
+                edad: 30,
+                esEstudiante: true
+            };
+
+            let jsonString = JSON.stringify(persona);
+            alert("JSON.stringify() Resultado:\n" + jsonString);
+        }
+    
+         // Ejemplo 2: Convertir JSON a un objeto con JSON.parse()
+         function mostrarJsonParse() {
+            let jsonInput = '{"nombre":"Juan","direccion":{"calle":"Calle Falsa 123","ciudad":"Bilbao"}}';
+            let objeto = JSON.parse(jsonInput);
+            alert("JSON.parse() Resultado:\n" + JSON.stringify(objeto, null, 2));
+        }
+        
 
         
     </script>
