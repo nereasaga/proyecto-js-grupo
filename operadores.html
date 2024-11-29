@@ -71,11 +71,12 @@ pre {
             <p>Estos operadores realizan operaciones matemáticas como suma, resta, multiplicación, etc.<p>
                 <div class="divEjemplos">
     <h5>Suma</h5>
-        <pre><code>
+<pre><code>
 let a = 10;
 let b = 3;
 console.log(a + b)
-        </code></pre>
+</code></pre>
+        <div class="divResultados" id="SumaRes"></div>
 <button class="butJS" onclick="SumaB()">console.log(a + b)</button>
 
     <h5>Resta</h5>
@@ -84,6 +85,7 @@ let a = 10;
 let b = 3;
 console.log(a - b)
         </code></pre>
+        <div id="RestaRes"></div>
 <button class="butJS" onclick="RestaB()">console.log(a - b)</button>
 
     <h5>Multiplicacion</h5>
@@ -92,6 +94,7 @@ let a = 10;
 let b = 3;
 console.log(a * b)
         </code></pre>
+        <div id="MultiRes"></div>
 <button class="butJS" onclick="MultiB()">console.log(a * b)</button>
 
     <h5>Division</h5>
@@ -100,6 +103,7 @@ let a = 10;
 let b = 3;
 console.log(a / b)
         </code></pre>
+        <div id="DiviRes"></div>
 <button class="butJS" onclick="DiviB()">console.log(a / b)</button>
 
     <h5>Modulo</h5>
@@ -108,8 +112,8 @@ let a = 10;
 let b = 3;
 console.log(a % b)
         </code></pre>
+        <div id="ModRes"></div>
 <button class="butJS" onclick="ModB()">console.log(a % b)</button>
-</div>
 
             <h4>Asignación</h4>
     <p>Se usan para asignar valores a las variables. Algunos permiten modificar el valor de una variable con una operación.</p>
@@ -119,6 +123,7 @@ console.log(a % b)
 var six = 5;
 console.log(var)
     </code></pre>
+<div id="VarRes"></div>
 <button class="butJS" onclick="varA()">console.log(var)</button>
 
 <h5>let</h5>
@@ -126,6 +131,7 @@ console.log(var)
 let six = 5;
 console.log(six)
     </code></pre>
+<div id="LetRes"></div>
 <button class="butJS" onclick="letA()">console.log(let)</button>
 
 <h5>const</h5>
@@ -133,8 +139,9 @@ console.log(six)
 const six = 5;
 console.log(six)
     </code></pre>
-<button class="butJS" onclick="constA()">cconsole.log(six)</button>
-            </code></pre>
+<div id="ConstRes"></div>
+<button class="butJS" onclick="constA()">console.log(six)</button>
+
         </div>
 
             <h4>Comparación</h4>
@@ -143,85 +150,107 @@ console.log(six)
     <h5>Igual que</h5>
     <pre><code>
 let a = 5; 
-let b = 10; 
+let b = 10;
+
 console.log(a === b); </pre></code>
+        <div class="divResultados" id="igualQue"></div>
         <button class="butJS" onclick="igualQue()">Ejemplo</button>
     <h5>Diferente de</h5>
         <pre><code>
 let a = 5; 
-let b = 10; 
+let b = 10;
+
 console.log(a !== b); 
         </code></pre> 
+        <div class="divResultados" id="diferenteDe"></div>
         <button class="butJS" onclick="diferenteDe()">Ejemplo</button>
     <h5>Menor que</h5>
         <pre><code>
 let a = 5;
 let b = 10;
+
 console.log(a < b);  </code></pre>
+        <div class="divResultados" id="menorQue"></div>
         <button class="butJS" onclick="menorQue()">Ejemplo</button>
     <h5>Mayor o igual que</h5>
         <pre><code>
 let a = 5;
-let b = 10; 
-console.log(a >= b); </code></pre>
+let b = 10;
+
+console.log(a >= b); 
+</code></pre>
+            <div class="divResultados" id="mayorIgualQue"></div>
         <button class="butJS" onclick="mayorIgualQue()">Ejemplo</button> 
         </div>
 
             <h4>Lógicos</h4>
             <p>Evalúan condiciones múltiples.<p>
             <div class="divEjemplos">
+
                 <h5>if both were true</h5>
                 <pre><code>
 let a = true;
 let b = false;
 
 console.log(a && b)
-                </code></pre>
-                <button class="butJS" onclick="AllTrue()">console.log(a && b)</button>
-                <h5>if one of them is true</h5>
-                <pre><code>
+</code></pre>
+
+<div id="TrueRes"></div>
+<button class="butJS" onclick="AllTrue()">console.log(a && b)</button>
+                
+<h5>if one of them is true</h5>
+<pre><code>
 let a = true;
 let b = false;
 
 console.log(a || b)
-                </code></pre>
-                <button class="butJS" onclick="CheckTrue()">console.log(a || b)</button>
-                <h5>print the oppsite of the value</h5>
-                <code><pre>
+</code></pre>
+<div id="CheckRes"></div>
+<button class="butJS" onclick="CheckTrue()">console.log(a || b)</button>
+                
+<h5>print the oppsite of the value</h5>
+<code><pre>
 let a = true;
 let b = false;
 
 console.log(!a)
-                </code></pre>
-                <button class="butJS" onclick="OppositeValueV1()">console.log(!a)</button>
-                <h5>print the opposite of the value</h5>
-                <pre><code>
+</code></pre>
+<div id="OppositeV1Res"></div>
+<button class="butJS" onclick="OppositeValueV1()">console.log(!a)</button>
+                
+<h5>print the opposite of the value</h5>
+<pre><code>
 let a = true;
 let b = false;
 
 console.log(!b)
-                </code></pre>
-                <button class="butJS" onclick="OppositeValueV2()">cconsole.log(!b)</button>
+</code></pre>
+<div id="OppositeV2Res"></div>
+<button class="butJS" onclick="OppositeValueV2()">cconsole.log(!b)</button>
 
-            <h5>String</h5>
-            <p>Trabajan con texto (strings).<p>
+<h5>String</h5>
+<p>Trabajan con texto (strings).<p>
             
-        <pre><code>
+<pre><code>
 let firstName = "John";
 let lastName = "Doe";
 
 console.log(firstName + lastName);
-            </code></pre>
-            <button class="butJS" onclick="string1()">console.log(firstName + lastName)</button>
+</code></pre>
+<div id="StringV1Res"></div>
+<button class="butJS" onclick="string1()">console.log(firstName + lastName)</button>
             
-            <pre><code>
+<pre><code>
 console.log(firstName + " " + lastName);
-            </code></pre>
-            <button class="butJS" onclick="string2()">console.log(firstName + " " + lastName)</button>
+</code></pre>
+<div id="StringV2Res"></div>
+<button class="butJS" onclick="string2()">console.log(firstName + " " + lastName)</button>
+
         </div>
             <h4>Incrementales y Decrementales</h4>
             <p>Aumentan o disminuyen valores.<p>
             <div class="divEjemplos">
+                
                 <h5>Incrementales</h5>
                 <p>Incrementa en 1</p>
             <pre><code>
@@ -229,6 +258,7 @@ let count = 0;
 console.log(++count);
             </code></pre>
 
+            <div class="divResultados" id="incremento"></div>
             <button class="butJS" onclick="incremento()">Ejemplo</button>
             <h5>Decrementales</h5>
             <p>Decrementa en 1</p>
@@ -236,6 +266,7 @@ console.log(++count);
             let count = 0;
             console.log(--count);   
             </code></pre>
+            <div class="divResultados" id="decremento"></div>
             <button class="butJS" onclick="decremento()">Ejemplo</button>
         </div>
 
@@ -246,10 +277,12 @@ console.log(++count);
                     <pre><code>
 console.log(5 & 1); // AND binario: 1
                      </code></pre>
+                     <div class="divResultados" id="bitAnd"></div>
                      <button class="butJS" onclick="bitAnd()">Ejemplo</button>
                 <pre><code>
 console.log(5 | 1); // OR binario: 5                
                     </code></pre>
+                    <div class="divResultados" id="bitOr"></div>
                     <button class="butJS" onclick="bitOr()">Ejemplo</button>
                     </div>
             <h4>Operadores especiales</h4>
@@ -260,11 +293,13 @@ console.log(5 | 1); // OR binario: 5
             console.log(typeof person); // Tipo: object
             console.log(person instanceof Object); // ¿Es instancia de Object?: true
             </code></pre>  
+            <div class="divResultados" id="instancia"></div>
             <button class="butJS" onclick="instancia()">Ejemplo</button>
             <pre><code>
             let age = 18;
             console.log(age >= 18 ? "Adulto" : "Menor"); // Operador ternario: Adulto                
             </code></pre>
+            <div class="divResultados" id="menorIgualQue"></div>
             <button class="butJS" onclick="menorIgualQue()">Ejemplo</button>
         </div>
     </section>
@@ -276,20 +311,29 @@ console.log(5 | 1); // OR binario: 5
         function SumaB() {
             let a = 10;
             let b = 3;
+            let result = a + b;
             
+            document.getElementById('SumaRes').innerText = 'Result: ' + result;
+
             console.log(a + b);
         }
 
         function RestaB() {
             let a = 10;
             let b = 3;
+            let result = a - b;
 
+            document.getElementById('RestaRes').innerText = 'Result: ' + result;
+            
             console.log(a - b);
         }
 
         function MultiB() {
             let a = 10;
             let b = 3;
+            let result = a * b;
+
+            document.getElementById('MultiRes').innerText = 'Result: ' + result;
 
             console.log(a * b);
         }
@@ -297,6 +341,9 @@ console.log(5 | 1); // OR binario: 5
         function DiviB() {
             let a = 10;
             let b = 3;
+            let result = a / b;
+
+            document.getElementById('DiviRes').innerText = 'Result: ' + result;
             
             console.log(a / b);
         }
@@ -304,6 +351,9 @@ console.log(5 | 1); // OR binario: 5
         function ModB() {
             let a = 10;
             let b = 3;
+            let result  = a % b;
+
+            document.getElementById('ModRes').innerText = 'Result: ' + result;
 ;
             console.log(a % b);
         }
@@ -312,18 +362,27 @@ console.log(5 | 1); // OR binario: 5
 
         function varA(){
             var six = 5;
-            
+            var result = 5;
+
+            document.getElementById('VarRes').innerText = 'Result: ' + result;
+
             console.log(six);
         }
 
         function letA() {
             let six = 5;
+            let result = 5;
+
+            document.getElementById('LetRes').innerText = 'Result: ' + result;
 
             console.log(six);
         }
 
         function constA() {
             const six = 5;
+            const result = 5;
+
+            document.getElementById('ConstRes').innerText = 'Result: ' + result;
 
             console.log(six);
         }
@@ -333,6 +392,9 @@ console.log(5 | 1); // OR binario: 5
         function igualQue() {
             let a = 5;
             let b = 10;
+            let result = a === b;
+
+            document.getElementById('igualQue').innerText = result;
 
             console.log(a === b);
         }
@@ -340,6 +402,9 @@ console.log(5 | 1); // OR binario: 5
         function diferenteDe() {
             let a = 5;
             let b = 10;
+            let result = a !== b;
+            
+            document.getElementById('diferenteDe').innerText = result;
 
             console.log(a !== b);
         }
@@ -347,6 +412,10 @@ console.log(5 | 1); // OR binario: 5
         function menorQue() {
             let a = 5;
             let b = 10;
+            let result = a < b;
+
+            document.getElementById('menorQue').innerText = result;
+
 
             console.log(a < b);
         }
@@ -354,36 +423,66 @@ console.log(5 | 1); // OR binario: 5
         function mayorIgualQue() {
             let a = 5;
             let b = 10;
+            let result = a>=b;
+
+            document.getElementById('mayorIgualQue').innerText = result;
 
             console.log(a >= b);
         }
 
         function incremento() {
             let count = 0;
+            let result = ++count;
+
+            document.getElementById('incremento').innerText = result;
+
             console.log(++count);
+            
         }
 
         function decremento() {
             let count = 0;
+            let result = --count;
+
+            document.getElementById('decremento').innerText = result;
+
             console.log(--count); 
         }
 
         function bitAnd() {
+            let result = (5 & 1);
+            
+            document.getElementById('bitAnd').innerText = result;
+
             console.log(5 & 1);
+            
         }
 
         function bitOr() {
+            let result = (5 | 1);
+
+            document.getElementById('bitOr').innerText = result;
+
             console.log(5 | 1);
         }
         
         function instancia() {
             let person = { name: "Alice" };
+            let result = (typeof person);
+            let result2 = (person instanceof Object);
+
+            document.getElementById('instancia').innerText = result +" "+ result2;
+
             console.log(typeof person); 
             console.log(person instanceof Object);
         }
 
         function menorIgualQue() {
             let age = 18;
+            let result = (age >= 18 ? "Adulto" : "Menor"); 
+
+            document.getElementById('menorIgualQue').innerText = result;
+
             console.log(age >= 18 ? "Adulto" : "Menor");
         }
 
@@ -392,6 +491,9 @@ console.log(5 | 1); // OR binario: 5
 
             let a = true;
             let b = false;
+            let result = a && b;
+
+            document.getElementById("TrueRes").innerText = "Result: " + result;
 
             console.log(a && b);
         }
@@ -399,6 +501,9 @@ console.log(5 | 1); // OR binario: 5
         function CheckTrue() {
             let a = true;
             let b = false;
+            let result = a || b;
+
+            document.getElementById("CheckRes").innerText = "Result: " + result;
 
             console.log(a || b);
         }
@@ -406,6 +511,9 @@ console.log(5 | 1); // OR binario: 5
         function OppositeValueV1() {
             let a = true;
             let b = false;
+            let result = !a;
+
+            document.getElementById("OppositeV1Res").innerText = "Result: " + result;
 
             console.log(!a);
         }
@@ -413,6 +521,9 @@ console.log(5 | 1); // OR binario: 5
         function OppositeValueV2() {
             let a = true;
             let b = false;
+            let result = !b;
+
+            document.getElementById("OppositeV2Res").innerText = "Result: " + result;
 
             console.log(!b);
         }
@@ -421,6 +532,9 @@ console.log(5 | 1); // OR binario: 5
         function string1() {
             let firstName = "John";
             let lastName = "Doe";
+            let result = firstName + lastName;
+
+            document.getElementById("StringV1Res").innerText = "Result: " + result;
 
             console.log(firstName + lastName);
         }
@@ -429,6 +543,9 @@ console.log(5 | 1); // OR binario: 5
         function string2() {
             let firstName = "John";
             let lastName = "Doe";
+            let result = firstName + " " + lastName;
+
+            document.getElementById("StringV2Res").innerText = "Result: " + result;
 
             console.log(firstName + " " + lastName); 
         }

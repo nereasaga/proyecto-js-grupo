@@ -48,9 +48,11 @@ for (var i = 0; i < 9; i++){
         console.log(i)
     }
 </code>
-</pre>
-                <button class="butJS" onclick="forex()">Ejemplo</button>
+</pre> 
+<div class="divResultados" id="forex"></div>
+        <button class="butJS" onclick="forex()">Ejemplo</button>
             </div>
+           
                 <p>Explicación</p>
                 <ul>
                     <li>var i = 0:</li>
@@ -69,8 +71,10 @@ for (var i = 0; i < 9; i++){
     }
 </code>
 </pre>
+<div class="divResultados" id="whilex"></div>
                 <button class="butJS" onclick="whilex()">Ejemplo</button>
             </div>
+            
             <p>Explicación</p>
             <ul>
                 <li>let i </li>
@@ -91,8 +95,10 @@ for (var i = 0; i < 9; i++){
     while (i<=5);
 </code>
 </pre>
+            <div class="divResultados" id="dowhilex"></div>
                 <button class="butJS" onclick="dowhilex()">Ejemplo</button>
             </div>
+            
             <p>Explicación</p>
             <ul>
                 <li>do: realiza el bucle al menos una vez</li>
@@ -111,8 +117,10 @@ for (var i = 0; i < 9; i++){
     }
 </code>
 </pre>
+                <div class="divResultados" id="forinex"></div>
                 <button class="butJS" onclick="forinex()">Ejemplo</button>
             </div>
+            
             <p>Explicación</p>
             <ul>
                 <li>for (key in person): hace una iteración através de cada key del objeto "person"</li>
@@ -130,6 +138,7 @@ for (var i = 0; i < 9; i++){
     }
 </code>
 </pre>
+                <div class="divResultados" id="forofex"></div>
                 <button class="butJS" onclick="forofex()">Ejemplo</button>
             </div>
             <p>Explicación</p>
@@ -152,6 +161,7 @@ for (var i = 0; i < 9; i++){
     }
 </code>
 </pre>
+                <div class="divResultados" id="continuex"></div>
                 <button class="butJS" onclick="continuex()">Ejemplo</button>
             </div>
             <p>Explicación</p>
@@ -172,6 +182,7 @@ for (var i = 0; i < 9; i++){
         }                      
 </code>
 </pre>
+                <div class="divResultados" id="breakx"></div>
                 <button class="butJS" onclick="breakx()">Ejemplo</button>
             </div>
             <p>Explicación</p>
@@ -199,6 +210,7 @@ for (var i = 0; i < 9; i++){
 
 </code>
 </pre>
+                <div class="divResultados" id="mapex"></div>
                 <button class="butJS" onclick="mapex()">Ejemplo</button>
             </div>
             <p>Explicación</p>
@@ -208,7 +220,7 @@ for (var i = 0; i < 9; i++){
             </ul>
             <h3>Diferencias entre Maps y Objetos JS</h3>
             <div class="comp">
-                <ul><p>Maps</p>
+                <ul><p>Maps</p>result
                     <li>Iterable directamente</li>
                     <li>Tiene una propiedad de tamaño</li>
                     <li>Las key puede ser de cualquiertipo de dato</li>
@@ -291,17 +303,12 @@ for (var i = 0; i < 9; i++){
 
     frutas.forEach((value, key) => {
         console.log(key, value);
-    });
-}             
+    });             
 </code>
 </pre>
+                <div class="divResultados" id="mapforex"></div>
                 <button class="butJS" onclick="mapforex()">Ejemplo</button>
             </div>
-            <p>Explicación</p>
-            <ul>
-                <li>fruits.forEach((value, key): devuelve cada key y su value</li>
-                <li>=>{: es un arrow function, se usa como funcion anónima que toma los parámetros</li>
-            </ul>
         </section>
     </main>
     <footer>
@@ -310,55 +317,100 @@ for (var i = 0; i < 9; i++){
     
     <script>
         function forex(){
+            let element = document.getElementById("forex");
+            element.innerText="";
+            
             for (let i = 0; i < 9; i++){
-                console.log(+i);
+
+                element.innerText += `i: ${i}\n`;
+
+                console.log(i);
             }
         }
         function whilex(){
+            let element = document.getElementById("whilex");
+            element.innerText="";
             let i=1;
+
             while (i<=5){
+                
+                element.innerText += `i: ${i}\n`;
+
                 console.log(i)
                 i++
             }
         }
         function dowhilex(){
+            let element = document.getElementById("dowhilex");
+            element.innerText="";
             let i=8;
+
             do{
+
+                element.innerText += `i: ${i}\n`;
+
                 console.log(i);
                 i++;
             }
             while(i<=5);
         }
         function forinex(){
+            let element = document.getElementById("forinex");
+            element.innerText="";
+            
             const persona={nombre:"Klaus", edad:25};
             for(let key in persona) {
+                let result = key + " " + (persona[key])
+
+                element.innerText += `${result}\n`;
+
                 console.log(key);
                 console.log(persona[key]);
             }
         }
         function forofex(){
+            let element = document.getElementById("forofex");
+            element.innerText="";
+
             const frutas = ["manzana", "banana", "fresa"];
-                    for (let fruta of frutas) {
-                        console.log(fruta);
-                    }
+            for (let fruta of frutas) {
+
+                element.innerText += `${fruta}\n`;
+            
+                console.log(fruta);
+            }
         }
         function continuex(){
+            let element = document.getElementById("continuex");
+            element.innerText="";
+
             for (let i=0; i<5;i++){
+                
                 if (i===3){
                     continue;
                 }
-            console.log(i);
+
+                element.innerText += `i: ${i}\n`;
+                console.log(i);
             }
         }
         function breakx(){
+            let element = document.getElementById("breakx");
+            element.innerText="";
+
             for (let i = 0; i < 5; i++) {
                 if (i === 3) {
                 break;
                 }
+
+                element.innerText += `i: ${i}\n`;
                 console.log(i);
             }
         }
         function mapex(){
+            let element = document.getElementById("mapex");
+            element.innerText="";
+
             const frutas = new Map([
                     ["manzanas", 500],
                     ["bananas", 300],
@@ -366,17 +418,26 @@ for (var i = 0; i < 9; i++){
                     ])
 
             let value = frutas.get("manzanas");
+
+            element.innerText += `i: ${value}\n`;
+
             console.log(value)
         }
         function mapforex() {
+            let element = document.getElementById("mapforex");
+            element.innerText="";
+
             const frutas = new Map([
                 ["manzanas", 500],
                 ["bananas", 300],
                 ["naranjas", 200]
                 ]);
 
-            frutas.forEach((value, key) => {
-                console.log(key, value);
+                frutas.forEach((value, key) => {
+                    let result = key + " " + value;
+                    
+                    element.innerText += `${result}\n`;
+                    console.log(key, value);
             });
             }
     </script>
