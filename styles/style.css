@@ -39,6 +39,7 @@ h1 {
 h2 {
     font-size: 3rem;
     padding-bottom: 2rem;
+    padding-top: 1rem;
     text-align: center;
     color:#2c5d0f;
     text-shadow:
@@ -56,6 +57,7 @@ h3 {
 }
 
 h4 {
+    width: 100%;
     font-size: 1.6rem;
     color: #669747;
     text-shadow:
@@ -73,14 +75,16 @@ h5 {
     padding-bottom: 0.8rem;
 }
 
+p {
+    padding-bottom: 1rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     width: 50%;
-    justify-content: center;
-    align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
     border: 3px solid #49792c;
@@ -88,6 +92,10 @@ main {
     background-color: #ffffe3;
     padding: 3rem;
     box-shadow: 1px 1px 10px;
+}
+
+pre {
+    text-align: left;
 }
 
 /* nav {

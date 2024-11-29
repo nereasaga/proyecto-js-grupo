@@ -27,7 +27,7 @@ h3 {
 
 section h4 {
     margin-bottom: 20px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 pre {
@@ -69,121 +69,272 @@ pre {
 
             <h4>Aritméticos</h4>
             <p>Estos operadores realizan operaciones matemáticas como suma, resta, multiplicación, etc.<p>
-            <pre><code>
+                <div class="divEjemplos">
+    <h5>Suma</h5>
+        <pre><code>
 let a = 10;
 let b = 3;
-console.log(a + b); // Suma: 13
-console.log(a - b); // Resta: 7
-console.log(a * b); // Multiplicación: 30
-console.log(a / b); // División: 3.333...
-console.log(a % b); // Módulo: 1
-            </code></pre>
+console.log(a + b)
+        </code></pre>
+<button class="butJS" onclick="SumaB()">console.log(a + b)</button>
 
-<p>Result of a + b: <span id="sumResult"></span></p>
-<p>Result of a - b: <span id="subtractResult"></span></p>
-<p>Result of a * b: <span id="multiplyResult"></span></p>
-<p>Result of a / b: <span id="divideResult"></span></p>
-<p>Result of a % b: <span id="modResult"></span></p>
+    <h5>Resta</h5>
+        <pre><code>
+let a = 10;
+let b = 3;
+console.log(a - b)
+        </code></pre>
+<button class="butJS" onclick="RestaB()">console.log(a - b)</button>
 
-<button class="arite" onclick="ariteB()">Explicacion Visual</button>
+    <h5>Multiplicacion</h5>
+        <pre><code>
+let a = 10;
+let b = 3;
+console.log(a * b)
+        </code></pre>
+<button class="butJS" onclick="MultiB()">console.log(a * b)</button>
+
+    <h5>Division</h5>
+        <pre><code>
+let a = 10;
+let b = 3;
+console.log(a / b)
+        </code></pre>
+<button class="butJS" onclick="DiviB()">console.log(a / b)</button>
+
+    <h5>Modulo</h5>
+        <pre><code>
+let a = 10;
+let b = 3;
+console.log(a % b)
+        </code></pre>
+<button class="butJS" onclick="ModB()">console.log(a % b)</button>
+</div>
+
             <h4>Asignación</h4>
-            <p>Se usan para asignar valores a las variables. Algunos permiten modificar el valor de una variable con una operación.</p>
-                <pre><code>
-let x = 10; // Asigna 10 a x
-x += 5; // Suma 5 a x (x = x + 5)
-console.log(x); // 15                    
+    <p>Se usan para asignar valores a las variables. Algunos permiten modificar el valor de una variable con una operación.</p>
+    <div class="divEjemplos">
+<h5>var</h5>
+    <pre><code>
+var six = 5;
+console.log(var)
+    </code></pre>
+<button class="butJS" onclick="varA()">console.log(var)</button>
+
+<h5>let</h5>
+    <pre><code>
+let six = 5;
+console.log(six)
+    </code></pre>
+<button class="butJS" onclick="letA()">console.log(let)</button>
+
+<h5>const</h5>
+    <pre><code>
+const six = 5;
+console.log(six)
+    </code></pre>
+<button class="butJS" onclick="constA()">cconsole.log(six)</button>
             </code></pre>
+        </div>
 
             <h4>Comparación</h4>
             <p>Comparan dos valores y devuelven true o false según el resultado de la comparación.<p>
 <div class="divEjemplos">
     <h5>Igual que</h5>
-        <p>let a = 5; <br>
-        let b = 10; <br>
-        console.log(a === b); </p>
+    <pre><code>
+let a = 5; 
+let b = 10; 
+console.log(a === b); </pre></code>
         <button class="butJS" onclick="igualQue()">Ejemplo</button>
     <h5>Diferente de</h5>
-        <p>let a = 5; <br>
-        let b = 10; <br>
-        console.log(a !== b);</p>  
+        <pre><code>
+let a = 5; 
+let b = 10; 
+console.log(a !== b); 
+        </code></pre> 
         <button class="butJS" onclick="diferenteDe()">Ejemplo</button>
     <h5>Menor que</h5>
-        <p>let a = 5; <br>
-        let b = 10; <br>
-        console.log(a < b);</p>  
+        <pre><code>
+let a = 5;
+let b = 10;
+console.log(a < b);  </code></pre>
         <button class="butJS" onclick="menorQue()">Ejemplo</button>
     <h5>Mayor o igual que</h5>
-        <p>let a = 5; <br>
-        let b = 10; <br>
-        console.log(a >= b);</p> 
+        <pre><code>
+let a = 5;
+let b = 10; 
+console.log(a >= b); </code></pre>
         <button class="butJS" onclick="mayorIgualQue()">Ejemplo</button> 
         </div>
 
             <h4>Lógicos</h4>
             <p>Evalúan condiciones múltiples.<p>
-            <pre><code>
-let a = 10;
-let b = 3;
+            <div class="divEjemplos">
+                <h5>if both were true</h5>
+                <pre><code>
+let a = true;
+let b = false;
 
-console.log(a + b); // Suma: 13
-console.log(a - b); // Resta: 7
-console.log(a * b); // Multiplicación: 30
-console.log(a / b); // División: 3.333...
-console.log(a % b); // Módulo: 1
-            </code></pre>
-            <h4>Cadena</h4>
+console.log(a && b)
+                </code></pre>
+                <button class="butJS" onclick="AllTrue()">console.log(a && b)</button>
+                <h5>if one of them is true</h5>
+                <pre><code>
+let a = true;
+let b = false;
+
+console.log(a || b)
+                </code></pre>
+                <button class="butJS" onclick="CheckTrue()">console.log(a || b)</button>
+                <h5>print the oppsite of the value</h5>
+                <code><pre>
+let a = true;
+let b = false;
+
+console.log(!a)
+                </code></pre>
+                <button class="butJS" onclick="OppositeValueV1()">console.log(!a)</button>
+                <h5>print the opposite of the value</h5>
+                <pre><code>
+let a = true;
+let b = false;
+
+console.log(!b)
+                </code></pre>
+                <button class="butJS" onclick="OppositeValueV2()">cconsole.log(!b)</button>
+
+            <h5>String</h5>
             <p>Trabajan con texto (strings).<p>
-            <pre><code>
+            
+        <pre><code>
 let firstName = "John";
 let lastName = "Doe";
 
-console.log(firstName + " " + lastName); // Concatenación: John Doe
-console.log(firstName.length); // Longitud de la cadena: 4                
+console.log(firstName + lastName);
             </code></pre>
-            <h4>Incrementales y Decrementales</h4>
-            <p>Aumentan o disminuyen valores.<p>
+            <button class="butJS" onclick="string1()">console.log(firstName + lastName)</button>
             
             <pre><code>
-let count = 0;
-
-count++; // Incrementa en 1
-console.log(count); // 1
-</code></pre>
-
-<button class="butJS" onclick="incremento()">Ejemplo Incremental</button>
-
-count--; // Decrementa en 1
-console.log(count); // 0                
+console.log(firstName + " " + lastName);
             </code></pre>
+            <button class="butJS" onclick="string2()">console.log(firstName + " " + lastName)</button>
+        </div>
+            <h4>Incrementales y Decrementales</h4>
+            <p>Aumentan o disminuyen valores.<p>
+            <div class="divEjemplos">
+                <h5>Incrementales</h5>
+                <p>Incrementa en 1</p>
+            <pre><code>
+let count = 0;
+console.log(++count);
+            </code></pre>
+
+            <button class="butJS" onclick="incremento()">Ejemplo</button>
+            <h5>Decrementales</h5>
+            <p>Decrementa en 1</p>
+            <pre><code>
+            let count = 0;
+            console.log(--count);   
+            </code></pre>
+            <button class="butJS" onclick="decremento()">Ejemplo</button>
+        </div>
 
 
             <h4>Operadores Bit a Bit</h4>
             <p>Realizan operaciones a nivel binario (avanzado).<p>
-            <pre><code>
+                <div class="divEjemplos">
+                    <pre><code>
 console.log(5 & 1); // AND binario: 1
+                     </code></pre>
+                     <button class="butJS" onclick="bitAnd()">Ejemplo</button>
+                <pre><code>
 console.log(5 | 1); // OR binario: 5                
-            </code></pre>
+                    </code></pre>
+                    <button class="butJS" onclick="bitOr()">Ejemplo</button>
+                    </div>
             <h4>Operadores especiales</h4>
             <p>Tienen usos más específicos<p>
+            <div class="divEjemplos">
             <pre><code>
-let person = { name: "Alice" };
-console.log(typeof person); // Tipo: object
-console.log(person instanceof Object); // ¿Es instancia de Object?: true
-                
-let age = 18;
-console.log(age >= 18 ? "Adulto" : "Menor"); // Operador ternario: Adulto                
+            let person = { name: "Alice" };
+            console.log(typeof person); // Tipo: object
+            console.log(person instanceof Object); // ¿Es instancia de Object?: true
+            </code></pre>  
+            <button class="butJS" onclick="instancia()">Ejemplo</button>
+            <pre><code>
+            let age = 18;
+            console.log(age >= 18 ? "Adulto" : "Menor"); // Operador ternario: Adulto                
             </code></pre>
-
+            <button class="butJS" onclick="menorIgualQue()">Ejemplo</button>
+        </div>
     </section>
 </main>
 
         <button class="but"><a href="index.html">Volver al índice</a></button>
     <script>
+
+        function SumaB() {
+            let a = 10;
+            let b = 3;
+            
+            console.log(a + b);
+        }
+
+        function RestaB() {
+            let a = 10;
+            let b = 3;
+
+            console.log(a - b);
+        }
+
+        function MultiB() {
+            let a = 10;
+            let b = 3;
+
+            console.log(a * b);
+        }
+
+        function DiviB() {
+            let a = 10;
+            let b = 3;
+            
+            console.log(a / b);
+        }
+
+        function ModB() {
+            let a = 10;
+            let b = 3;
+;
+            console.log(a % b);
+        }
+
+
+
+        function varA(){
+            var six = 5;
+            
+            console.log(six);
+        }
+
+        function letA() {
+            let six = 5;
+
+            console.log(six);
+        }
+
+        function constA() {
+            const six = 5;
+
+            console.log(six);
+        }
+
+
+
         function igualQue() {
             let a = 5;
             let b = 10;
 
-            console.log(a === b)
+            console.log(a === b);
         }
 
         function diferenteDe() {
@@ -212,6 +363,75 @@ console.log(age >= 18 ? "Adulto" : "Menor"); // Operador ternario: Adulto
             console.log(++count);
         }
 
+        function decremento() {
+            let count = 0;
+            console.log(--count); 
+        }
+
+        function bitAnd() {
+            console.log(5 & 1);
+        }
+
+        function bitOr() {
+            console.log(5 | 1);
+        }
+        
+        function instancia() {
+            let person = { name: "Alice" };
+            console.log(typeof person); 
+            console.log(person instanceof Object);
+        }
+
+        function menorIgualQue() {
+            let age = 18;
+            console.log(age >= 18 ? "Adulto" : "Menor");
+        }
+
+        
+        function AllTrue() {
+
+            let a = true;
+            let b = false;
+
+            console.log(a && b);
+        }
+
+        function CheckTrue() {
+            let a = true;
+            let b = false;
+
+            console.log(a || b);
+        }
+
+        function OppositeValueV1() {
+            let a = true;
+            let b = false;
+
+            console.log(!a);
+        }
+
+        function OppositeValueV2() {
+            let a = true;
+            let b = false;
+
+            console.log(!b);
+        }
+
+
+        function string1() {
+            let firstName = "John";
+            let lastName = "Doe";
+
+            console.log(firstName + lastName);
+        }
+        
+
+        function string2() {
+            let firstName = "John";
+            let lastName = "Doe";
+
+            console.log(firstName + " " + lastName); 
+        }
 
     </script>
 </body>
