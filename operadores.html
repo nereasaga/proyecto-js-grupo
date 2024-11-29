@@ -53,21 +53,21 @@ pre {
     <main>
         <h2>Operadores en JavaScript</h2>
         <h3>Tipos de Operadores</h3>
-    <div class="navope">
-        <ul>
-            <li>Aritméticos</li>
-            <li>Comparación</li>
-            <li>Lógicos</li>
-            <li>Cadena</li>
-            <li>Incrementales y Decrementales</li>
-            <li>Operadores Bit a Bit</li>
-            <li>Operadores Especiales</li>
-        </ul>
-    </div>
+        <div class="navope">
+            <ul>
+                <li>Aritméticos</li>
+                <li>Comparación</li>
+                <li>Lógicos</li>
+                <li>Cadena</li>
+                <li>Incrementales y Decrementales</li>
+                <li>Operadores Bit a Bit</li>
+                <li>Operadores Especiales</li>
+            </ul>
+        </div>
 
-    <section>
+        <section>
 
-        <h4>Aritméticos</h4>
+            <h4>Aritméticos</h4>
             <p>Estos operadores realizan operaciones matemáticas como suma, resta, multiplicación, etc.<p>
             <pre><code>
 let a = 10;
@@ -96,17 +96,30 @@ console.log(x); // 15
 
             <h4>Comparación</h4>
             <p>Comparan dos valores y devuelven true o false según el resultado de la comparación.<p>
-            <pre><code>
-let a = 5;
-let b = 10;
+<div class="divEjemplos">
+    <h5>Igual que</h5>
+        <p>let a = 5; <br>
+        let b = 10; <br>
+        console.log(a === b); </p>
+        <button class="butJS" onclick="igualQue()">Ejemplo</button>
+    <h5>Diferente de</h5>
+        <p>let a = 5; <br>
+        let b = 10; <br>
+        console.log(a !== b);</p>  
+        <button class="butJS" onclick="diferenteDe()">Ejemplo</button>
+    <h5>Menor que</h5>
+        <p>let a = 5; <br>
+        let b = 10; <br>
+        console.log(a < b);</p>  
+        <button class="butJS" onclick="menorQue()">Ejemplo</button>
+    <h5>Mayor o igual que</h5>
+        <p>let a = 5; <br>
+        let b = 10; <br>
+        console.log(a >= b);</p> 
+        <button class="butJS" onclick="mayorIgualQue()">Ejemplo</button> 
+        </div>
 
-console.log(a === b); // Igual que: false
-console.log(a !== b); // Diferente de: true
-console.log(a < b);   // Menor que: true
-console.log(a >= b);  // Mayor o igual que: false  
-            </code></pre>
-
-            <h4>Logicos</h4>
+            <h4>Lógicos</h4>
             <p>Evalúan condiciones múltiples.<p>
             <pre><code>
 let a = 10;
@@ -129,11 +142,15 @@ console.log(firstName.length); // Longitud de la cadena: 4
             </code></pre>
             <h4>Incrementales y Decrementales</h4>
             <p>Aumentan o disminuyen valores.<p>
+            
             <pre><code>
 let count = 0;
 
 count++; // Incrementa en 1
 console.log(count); // 1
+</code></pre>
+
+<button class="butJS" onclick="incremento()">Ejemplo Incremental</button>
 
 count--; // Decrementa en 1
 console.log(count); // 0                
@@ -162,7 +179,38 @@ console.log(age >= 18 ? "Adulto" : "Menor"); // Operador ternario: Adulto
 
         <button class="but"><a href="index.html">Volver al índice</a></button>
     <script>
+        function igualQue() {
+            let a = 5;
+            let b = 10;
 
+            console.log(a === b)
+        }
+
+        function diferenteDe() {
+            let a = 5;
+            let b = 10;
+
+            console.log(a !== b);
+        }
+
+        function menorQue() {
+            let a = 5;
+            let b = 10;
+
+            console.log(a < b);
+        }
+
+        function mayorIgualQue() {
+            let a = 5;
+            let b = 10;
+
+            console.log(a >= b);
+        }
+
+        function incremento() {
+            let count = 0;
+            console.log(++count);
+        }
 
 
     </script>
