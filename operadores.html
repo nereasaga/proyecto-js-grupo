@@ -139,7 +139,7 @@ console.log(six)
 const six = 5;
 console.log(six)
     </code></pre>
-<div class="divResultados" id="ConstRes"></div>
+<div id="ConstRes"></div>
 <button class="butJS" onclick="constA()">console.log(six)</button>
 
         </div>
@@ -226,7 +226,7 @@ let b = false;
 console.log(!b)
 </code></pre>
 <div id="OppositeV2Res"></div>
-<button class="butJS" onclick="OppositeValueV2()">cconsole.log(!b)</button>
+<button class="butJS" onclick="OppositeValueV2()">console.log(!b)</button>
 
 <h5>String</h5>
 <p>Trabajan con texto (strings).<p>
@@ -245,6 +245,14 @@ console.log(firstName + " " + lastName);
 </code></pre>
 <div id="StringV2Res"></div>
 <button class="butJS" onclick="string2()">console.log(firstName + " " + lastName)</button>
+
+<pre><code>
+    let firstName = "John";
+    firstName += " Doe";
+    console.log(firstName);
+</code></pre>
+<div id="StringV3Res"></div>
+<button class="ButJS" onclick="string3()">console.log(firstName)</button>
 
         </div>
             <h4>Incrementales y Decrementales</h4>
@@ -548,6 +556,16 @@ console.log(5 | 1); // OR binario: 5
             document.getElementById("StringV2Res").innerText = "Result: " + result;
 
             console.log(firstName + " " + lastName); 
+        }
+
+        function string3() {
+            let firstName = "John";
+            firstName += " Doe";
+            result = firstName;
+
+            document.getElementById("StringV3Res").innerText = "Result: " + result;
+
+            console.log(result)
         }
 
     </script>
