@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto JavaScript</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+      li {
+        font-weight: bold;
+      }
+    </style>
 </head>
 <body>
     <nav class="navPaginas">
@@ -38,51 +43,50 @@
                 <li>funcion</li><p>Es un bloque de codigo que puede ser llamado</p>
                 <li>object</li><p>Estructura de datos que puede contener propiedades y métodos.</p>
                 <li>arrays</li><p>son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar 
-                                   operaciones de recorrido y de mutación.
-                                    Tanto la longitud como el tipo de los elementos de un array son variables.</p>
+                 operaciones de recorrido y de mutación.Tanto la longitud como el tipo de los elementos de un array son variables.</p>
              </ul>
             <p>de estos los siete primeros son considerados primarios</p>
          </div>
-
- <section>
+  </main>
+<section>
    <div class="divEjemplos"></div>
-    <h3>Tipado dinamico</h3>
-      <p>JavaScript es un lenguaje de  tipado dinámico. Las variables en JavaScript
-         no están asociadas directamente con ningún tipo de valor en particular,
-          y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos</p>
-          <h5>number</h5>
+      <h3>Tipado dinamico</h3>
+        <p>JavaScript es un lenguaje de  tipado dinámico. Las variables en JavaScript
+          no están asociadas directamente con ningún tipo de valor en particular,
+            y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos</p>
+            <h5>number</h5>
+                <pre><code>
+                      let variable =42 ; 
+                      console.log(variable); 
+                  </code></pre>
+                  <div class="divResultados" id="numberRes"></div>
+                  <button class="butJS" onclick="numberB()">ejemplo</button>
+            <h5>string</h5>
+                  <pre><code>
+                    let variable = "hola";
+                      console.log(variable); 
+                  </code></pre>
+                      <div class="divResultados" id="stringRes"></div>
+                      <button class="butJS" onclick="stringB()">ejemplo</button>
+          <h5>boolean</h5>
               <pre><code>
-                    let variable = 42; // Inicialmente es un número
-                    console.log(variable); 
+                  let variable = "true"; 
+                  console.log(variable);
                 </code></pre>
-                <div class="divResultados" id="numberRes"></div>
-                <button class="butJS" onclick="numberB()">ejemplo</button>
-         <h5>string</h5>
-                <pre><code>
-                    variable = "Hola"; // Ahora es un string
-                    console.log(variable); 
-                </code></pre>
-                    <div class="divResultados" id="stringRes"></div>
-                    <button class="butJS" onclick="stringB()">ejemplo</button>
-        <h5>boolean</h5>
-                <pre><code>
-                    variable = "true"; // Ahora es un booleano
-                    console.log(variable);
-               </code></pre>
-               <div class="divResultados" id="booleanRes"></div>
-               <button class="butJS" onclick="booleanB()">ejemplo</button>
-           
- <h3>objetos y arrays</h3>
-     <p>estos dos tipos no nos permiten cambiar el valor 
-        como tal ya que son una coleccion de cosas,
-        pero a traves de la desetructuracion podemos selecionar
-         ciertos valores y propiedades para modificarlos</p>
+              <div class="divResultados" id="booleanRes"></div>
+              <button class="butJS" onclick="booleanB()">ejemplo</button>
+            
+      <h3>objetos y arrays</h3>
+          <p>estos dos elementos no nos permiten cambiar el valor 
+            como tal ya que son una coleccion de cosas,
+            pero a traves de la desetructuracion podemos selecionar
+            ciertos valores y propiedades para modificarlos</p>
 
-        <h4>ejemplo arrays</h4>
-         <p>los arrays son como listas ordenadas y como tal se gestionan mediante indices diferentes
-             para cada elemento y que por defecto comienza desde el cero, 
-             para acceder a un elemnto hay que referenciar el nombre del array<br> seguido del numero de indice del elmento entre corchetes[] </p>
-          <h5>array</h5>
+            <h4>ejemplo arrays</h4>
+            <p>los arrays son como listas ordenadas y como tal se gestionan mediante indices diferentes
+                para cada elemento y que por defecto comienza desde el cero, 
+                para acceder a un elemnto hay que referenciar el nombre del array<br> seguido del numero de indice del elmento entre corchetes[] </p>
+              <h5>array</h5>
             
             <pre><code>
               let frutas = ['Manzana', 'Banana', 'Cereza', 'Durazno', 'Uva'];
@@ -95,65 +99,63 @@
               let indice = 4;
               let frutaSeleccionada = frutas[4]; 
               console.log('Fruta seleccionada dinámicamente:', frutaSeleccionada)
+             </code></pre>
 
-                
-           </code></pre>
-
-           <div class="divResultados" id="frutasRes"></div>
-           <button class="butJS" onclick="frutasB()">ejmplo</button>
+            <div class="divResultados" id="frutasRes"></div>
+            <button class="butJS" onclick="frutasB()">ejmplo</button>
 
 
-      <h4>ejemplo object</h4>
-      <p>los objetos son estructuras de datos que pueden contener
-         propiedades y metodos, se gestionan a traves de palabras clave normalmente 
-         un nombre descriptivo siendo sensibles a mayus/minus,
-          para seleccionar un elemento y una propiedad o metodo utilizamos una notacion de puntos y corchetes .{} </p>
-          <h5>object</h5>
-           <pre><code>
-              let persona = {
-                nombre: 'Juan',
-                edad: 30,
-                profesion: 'Ingeniero',
-                ciudad: 'Madrid'  };
+       <h4>ejemplo object</h4>
+        <p>los objetos son estructuras de datos que pueden contener
+            propiedades y metodos, se gestionan a traves de palabras clave normalmente 
+            un nombre descriptivo siendo sensibles a mayus/minus,
+              para seleccionar un elemento y una propiedad o metodo utilizamos una notacion de puntos y corchetes .{} </p>
+              <h5>object</h5>
+              <pre><code>
+                let persona = {
+                  nombre: 'Juan',
+                  edad: 30,
+                  profesion: 'Ingeniero',
+                  ciudad: 'Madrid'  };
 
-                let nombre = persona.nombre;
-                let profesion = persona.profesion;
-                console.log('Información de la persona:', persona);
-              </code></pre>
-         <div class="divResultados" id="personaRes"></div>
-         <button class="butJS" onclick="personaB()">ejemplo</button>
-    
+                  let nombre = persona.nombre;
+                  let profesion = persona.profesion;
+                  console.log('Información de la persona:', persona);
+                </code></pre>
+          <div class="divResultados" id="personaRes"></div>
+          <button class="butJS" onclick="personaB()">ejemplo</button>
+      
 
-    <h3>Declaracion de variables</h3>
-        <p>puedes declarar una variable utilizando las palabras clave let, const o var:</p>
-     <h5>let:</h5><p>Se utiliza para declarar variables cuyo valor puede cambiar.</p> 
+     <h3>Declaracion de variables</h3>
+          <p>puedes declarar una variable utilizando las palabras clave let, const o var:</p>
+       <h5>let:</h5><p>Se utiliza para declarar variables cuyo valor puede cambiar.</p> 
             <pre><code>
                let nombre ="pedro";
                 nombre="Carlos" // el valor puede ser reasignado
             </code></pre>
-    <h5>const:</h5> <p>Se utiliza para declarar variables cuyo valor no puede cambiar (constantes).</p>
+       <h5>const:</h5> <p>Se utiliza para declarar variables cuyo valor no puede cambiar (constantes).</p>
             <pre><code>
               const pi = 3.1416;
               consol.log(pi) // pi= 3.14; // esto daria error, porque el valor no puede cambiar//
             </code></pre>
    
-   <h5>var (antiguo):</h5>
-          <p> Era el método tradicional, pero hoy se usa menos debido a su comportamiento
-            menos predecible en cuanto a alcance.</p>
-           <pre><code>
-              var edad= 20;
-               edad=21 // se puede reasignar//
-            </code></pre>
+        <h5>var (antiguo):</h5>
+            <p> Era el método tradicional, pero hoy se usa menos debido a su comportamiento
+              menos predecible en cuanto a alcance.</p>
+            <pre><code>
+                var edad= 20;
+                edad=21 // se puede reasignar//
+              </code></pre>
 
- <h3>Ambito de variables</h3>
+       <h3>Ambito de variables</h3>
 
         <p>Cuando declaras una variable fuera de cualquier función, se denomina variable global, 
            porque está disponible para cualquier otro código en el documento actual.
             Cuando declaras una variable dentro de una función,
             se llama variable local, porque solo está disponible dentro de esa función.</p>
 
-     <h4>Ejemplo</h4> 
-       <h5>global</h5>
+        <h4>Ejemplo</h4> 
+         <h5>global</h5>
               <pre><code>
                 let mensajeGlobal = "Soy una variable global";
                 console.log(mensajeGlobal);
@@ -169,67 +171,66 @@
             <div class="divResultados" id="mensajeLocalRes"></div>
             <button class="butJS" onclick="mensajeLocalB()">ejemplo</button>
     
-  <h3>Asignacion de variables</h3>
+       <h3>Asignacion de variables</h3>
         <p>La asignación de valores a una variable se realiza con el operador =:</p>
           <h5>Ejemplo</h5> 
             <pre>operador<code>
                 let edad = 30; 
                 let nombre= "juan"; 
 
-                console.log(edad + nombre);
-              
-            </code></pre>
-          <div class="divResultados" id="AsignacionRes"></div>
-        <button class="butJS" onclick="AsignacionB()">ejemplo</button>
+                console.log(edad.nombre);
+                
+              </code></pre>
+            <div class="divResultados" id="AsignacionRes"></div>
+          <button class="butJS" onclick="AsignacionB()">ejemplo</button>
        
-  <h3>Instancia de una variable</h3> 
-       <p>Instanciar objetos en JavaScript se refiere al proceso de crear un nuevo objeto basado
-         en una plantilla o molde predefinido, que generalmente se conoce como una “clase”, Para hacer esto,
-         JavaScript proporciona una palabra clave especial: new.</p>
-      <h3>Ejemplo</h3> 
+       <h3>Instancia de una variable</h3> 
+          <p>Instanciar objetos en JavaScript se refiere al proceso de crear un nuevo objeto basado
+            en una plantilla o molde predefinido, que generalmente se conoce como una “clase”, Para hacer esto,
+            JavaScript proporciona una palabra clave especial: new.</p>
+       <h3>Ejemplo</h3> 
           <pre><code>
             class Libro {
               constructor(titulo, autor, anioPublicacion) {
                   this.titulo = titulo;
                   this.autor = autor;
                   this.anioPublicacion = anioPublicacion;
-              }
+                   }
               obtenerDescripcion() {
                   return `El libro "${this.titulo}" fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
-              }
-          }
-          let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
-          console.log(miLibro.obtenerDescripcion());
+                   }
+                  }
+                let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
+               console.log(miLibro.obtenerDescripcion());
            </code></pre>
-          <div class="divResultados" id="libroInfoRes"></div>
-        <button class="butJS" onclick="libroInfoB()">ejemplo</button>
- </section>
-  </main>
-       <footer>
+           <div class="divResultados" id="libroInfoRes"></div>
+       <button class="butJS" onclick="libroInfoB()">ejemplo</button>
+   </section>
+
+   <footer>
         <button class="but"><a href="index.html">Volver al índice</a></button>
-    </footer>
-    <script>
+  </footer>
+ <script>
 
      function numberB() {
             let variable =42;
             document.getElementById('numberRes').innerText =  variable;
             console.log(variable)
-           }
+            }
 
-      function stringB() {
+     function stringB() {
             let variable ="hola";
             document.getElementById('stringRes').innerText = variable;
             console.log(variable);
-           }
+             }
         
      function booleanB() {
-            let variable =true;
+            let variable ="true";
             document.getElementById('booleanRes').innerText = variable;
             console.log(variable);
-           }
-
+            }
      function frutasB() {
-      let frutas = ['Manzana', 'Banana', 'Cereza', 'Durazno', 'Uva'];
+              let frutas = ['Manzana', 'Banana', 'Cereza', 'Durazno', 'Uva'];
               let primeraFruta = frutas[0]; 
               let terceraFruta = frutas[2]
 
@@ -240,8 +241,7 @@
               let frutaSeleccionada = frutas[4]; 
               document.getElementById('frutasRes').innerText =  frutaSeleccionada;
               console.log( frutaSeleccionada)
-
-                 }
+                      }
 
      function personaB() {
                let persona = {
@@ -257,44 +257,41 @@
                 `Nombre: ${nombre}, Profesión: ${profesion}`;
 
                 console.log('Información de la persona:', persona);
-                     
-                  }
-
-      
-          let mensajeGlobal ="soy una variable global";
-         function mensajeGlobalB() {
+                        }
+     let mensajeGlobal ="soy una variable global";
+            function mensajeGlobalB() {
             document.getElementById('mensajeGlobalRes').innerText = mensajeGlobal;
              console.log(mensajeGlobal);
-            
-           }
+                   }
 
-         function mensajeLocalB() {
-          let mensajeLocal = "Soy una variable local";
-          document.getElementById('mensajeLocalRes').innerText = mensajeLocal;
-          console.log(mensajeLocal);
-       
-            }
+     function mensajeLocalB() {
+            let mensajeLocal = "Soy una variable local";
+            document.getElementById('mensajeLocalRes').innerText = mensajeLocal;
+            console.log(mensajeLocal);
+                }
           
-            function AsignacionB() {
+     function AsignacionB() {
             let edad = 30;
             let nombre = "juan";
-            document.getElementById('AsignacionRes').innerText = edad + nombre;
-            console.log(edad + nombre);
-            }
+            document.getElementById('AsignacionRes').innerText = edad.nombre;
+            console.log(edad.nombre);
+                }
               
             class Libro {
-             constructor(titulo, autor, anioPublicacion){
+            constructor(titulo, autor, anioPublicacion) {
                 this.titulo = titulo;
                 this.autor = autor;
                 this.anioPublicacion = anioPublicacion;
-            }
+                }
             obtenerDescripcion() {
-                return `El libro ${this.titulo} fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
-            }
-              }
-              let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
-              document.getElementById('libroInfoRes').innerText = miLibro.obtenerDescripcion();
-              console.log(miLibro.obtenerDescripcion());
-          </script>
-      </body>
+                return `El libro "${this.titulo}" fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
+                    }
+                }
+            function libroInfoB() {
+            let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
+            document.getElementById('libroInfoRes').innerText = miLibro.obtenerDescripcion();
+            console.log(miLibro.obtenerDescripcion());
+                 }
+      </script>
+   </body>
 </html>
