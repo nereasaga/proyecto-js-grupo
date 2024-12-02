@@ -8,6 +8,10 @@
 </head>
 <style>
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navope ul {
     justify-content: center;
     display: flex;
@@ -55,17 +59,84 @@ pre {
         <h3>Tipos de Operadores</h3>
         <div class="navope">
             <ul>
-                <li>Aritméticos</li>
-                <li>Comparación</li>
-                <li>Lógicos</li>
-                <li>Cadena</li>
-                <li>Incrementales y Decrementales</li>
-                <li>Operadores Bit a Bit</li>
-                <li>Operadores Especiales</li>
+                <li><a href="#asignacion">Asignacion</a></li>
+                <li><a href="#cadena">Cadena</a></li>
+                <li><a href="#aritmeticos">Aritméticos</a></li>
+                <li><a href="#incrementales_Decrementales">Incrementales y Decrementales</a></li>
+                <li><a href="#comparacion">Comparación</a></li>
+                <li><a href="#logicos">Lógicos</a></li>
+                <li><a href="#bitabit">Operadores Bit a Bit</a></li>
+                <li><a href="#operadores">Operadores Especiales</a></li>
             </ul>
         </div>
 
-        <section>
+<section id="asignacion">
+
+            <h4>Asignación</h4>
+    <p>Se usan para asignar valores a las variables. Algunos permiten modificar el valor de una variable con una operación.</p>
+    <div class="divEjemplos">
+<h5>var</h5>
+    <pre><code>
+var six = 5;
+console.log(var)
+    </code></pre>
+<div class="divResultados" id="VarRes"></div>
+<button class="butJS" onclick="varA()">console.log(var)</button>
+
+<h5>let</h5>
+    <pre><code>
+let six = 5;
+console.log(six)
+    </code></pre>
+<div class="divResultados" id="LetRes"></div>
+<button class="butJS" onclick="letA()">console.log(let)</button>
+
+<h5>const</h5>
+    <pre><code>
+const six = 5;
+console.log(six)
+    </code></pre>
+<div class="divResultados" id="ConstRes"></div>
+<button class="butJS" onclick="constA()">console.log(six)</button>
+
+        </div>
+</section>
+
+<section id="cadena">
+
+        <h4>Cadena</h4>
+<p>Trabajan con texto (strings).<p>
+            <div class="divEjemplos">
+<pre><code>
+let firstName = "John";
+let lastName = "Doe";
+
+console.log(firstName + lastName);
+</code></pre>
+<div class="divResultados" id="StringV1Res"></div>
+<button class="butJS" onclick="string1()">console.log(firstName + lastName)</button>
+            
+<pre><code>
+console.log(firstName + " " + lastName);
+</code></pre>
+<div class="divResultados" id="StringV2Res"></div>
+<button class="butJS" onclick="string2()">console.log(firstName + " " + lastName)</button>
+
+<h5>Acumulativo</h5>
+<pre><code>
+    let firstName = "John";
+    firstName += " Doe";
+    console.log(firstName);
+</code></pre>
+<div class="divResultados" id="StringV3Res"></div>
+<button class="butJS" onclick="string3()">console.log(firstName)</button>
+
+        </div>
+
+</section>
+
+
+<section id="aritmeticos">
 
             <h4>Aritméticos</h4>
             <p>Estos operadores realizan operaciones matemáticas como suma, resta, multiplicación, etc.<p>
@@ -94,7 +165,7 @@ let a = 10;
 let b = 3;
 console.log(a * b)
         </code></pre>
-        <div id="MultiRes"></div>
+        <div class="divResultados" id="MultiRes"></div>
 <button class="butJS" onclick="MultiB()">console.log(a * b)</button>
 
     <h5>Division</h5>
@@ -115,34 +186,42 @@ console.log(a % b)
         <div class="divResultados" id="ModRes"></div>
 <button class="butJS" onclick="ModB()">console.log(a % b)</button>
 
-            <h4>Asignación</h4>
-    <p>Se usan para asignar valores a las variables. Algunos permiten modificar el valor de una variable con una operación.</p>
-    <div class="divEjemplos">
-<h5>var</h5>
-    <pre><code>
-var six = 5;
-console.log(var)
-    </code></pre>
-<div class="divResultados" id="VarRes"></div>
-<button class="butJS" onclick="varA()">console.log(var)</button>
+    </section>
 
-<h5>let</h5>
-    <pre><code>
-let six = 5;
-console.log(six)
-    </code></pre>
-<div class="divResultados" id="LetRes"></div>
-<button class="butJS" onclick="letA()">console.log(let)</button>
 
-<h5>const</h5>
-    <pre><code>
-const six = 5;
-console.log(six)
-    </code></pre>
-<div id="ConstRes"></div>
-<button class="butJS" onclick="constA()">console.log(six)</button>
+<section id="incrementales_Decrementales">
 
-        </div>
+
+<h4>Incrementales y Decrementales</h4>
+<p>Aumentan o disminuyen valores.<p>
+<div class="divEjemplos">
+    
+    <h5>Incrementales</h5>
+    <p>Incrementa en 1</p>
+<pre><code>
+let count = 0;
+console.log(++count);
+</code></pre>
+
+<div class="divResultados" id="incremento"></div>
+<button class="butJS" onclick="incremento()">Ejemplo</button>
+<h5>Decrementales</h5>
+<p>Decrementa en 1</p>
+<pre><code>
+let count = 0;
+console.log(--count);   
+</code></pre>
+<div class="divResultados" id="decremento"></div>
+<button class="butJS" onclick="decremento()">Ejemplo</button>
+</div>
+
+
+
+</section>
+
+
+<section id="comparacion">            
+
 
             <h4>Comparación</h4>
             <p>Comparan dos valores y devuelven true o false según el resultado de la comparación.<p>
@@ -183,6 +262,10 @@ console.log(a >= b);
         <button class="butJS" onclick="mayorIgualQue()">Ejemplo</button> 
         </div>
 
+
+
+<section id="logicos">
+
             <h4>Lógicos</h4>
             <p>Evalúan condiciones múltiples.<p>
             <div class="divEjemplos">
@@ -195,7 +278,7 @@ let b = false;
 console.log(a && b)
 </code></pre>
 
-<div id="TrueRes"></div>
+<div class="divResultados" id="TrueRes"></div>
 <button class="butJS" onclick="AllTrue()">console.log(a && b)</button>
                 
 <h5>if one of them is true</h5>
@@ -205,7 +288,7 @@ let b = false;
 
 console.log(a || b)
 </code></pre>
-<div id="CheckRes"></div>
+<div class="divResultados" id="CheckRes"></div>
 <button class="butJS" onclick="CheckTrue()">console.log(a || b)</button>
                 
 <h5>print the oppsite of the value</h5>
@@ -215,7 +298,7 @@ let b = false;
 
 console.log(!a)
 </code></pre>
-<div id="OppositeV1Res"></div>
+<div class="divResultados" id="OppositeV1Res"></div>
 <button class="butJS" onclick="OppositeValueV1()">console.log(!a)</button>
                 
 <h5>print the opposite of the value</h5>
@@ -225,60 +308,16 @@ let b = false;
 
 console.log(!b)
 </code></pre>
-<div id="OppositeV2Res"></div>
+<div class="divResultados" id="OppositeV2Res"></div>
 <button class="butJS" onclick="OppositeValueV2()">console.log(!b)</button>
 
-<h5>String</h5>
-<p>Trabajan con texto (strings).<p>
-            
-<pre><code>
-let firstName = "John";
-let lastName = "Doe";
 
-console.log(firstName + lastName);
-</code></pre>
-<div id="StringV1Res"></div>
-<button class="butJS" onclick="string1()">console.log(firstName + lastName)</button>
-            
-<pre><code>
-console.log(firstName + " " + lastName);
-</code></pre>
-<div id="StringV2Res"></div>
-<button class="butJS" onclick="string2()">console.log(firstName + " " + lastName)</button>
-
-<pre><code>
-    let firstName = "John";
-    firstName += " Doe";
-    console.log(firstName);
-</code></pre>
-<div id="StringV3Res"></div>
-<button class="ButJS" onclick="string3()">console.log(firstName)</button>
-
-        </div>
-            <h4>Incrementales y Decrementales</h4>
-            <p>Aumentan o disminuyen valores.<p>
-            <div class="divEjemplos">
-                
-                <h5>Incrementales</h5>
-                <p>Incrementa en 1</p>
-            <pre><code>
-let count = 0;
-console.log(++count);
-            </code></pre>
-
-            <div class="divResultados" id="incremento"></div>
-            <button class="butJS" onclick="incremento()">Ejemplo</button>
-            <h5>Decrementales</h5>
-            <p>Decrementa en 1</p>
-            <pre><code>
-            let count = 0;
-            console.log(--count);   
-            </code></pre>
-            <div class="divResultados" id="decremento"></div>
-            <button class="butJS" onclick="decremento()">Ejemplo</button>
-        </div>
+</section>
 
 
+<section id="bitabit">
+
+           
             <h4>Operadores Bit a Bit</h4>
             <p>Realizan operaciones a nivel binario (avanzado).<p>
                 <div class="divEjemplos">

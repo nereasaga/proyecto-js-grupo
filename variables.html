@@ -148,42 +148,63 @@
  <h3>Ambito de variables</h3>
 
         <p>Cuando declaras una variable fuera de cualquier función, se denomina variable global, 
-        porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función,
-         se llama variable local, porque solo está disponible dentro de esa función.</p>
+           porque está disponible para cualquier otro código en el documento actual.
+            Cuando declaras una variable dentro de una función,
+            se llama variable local, porque solo está disponible dentro de esa función.</p>
 
-       <h3>Ejemplo</h3> 
-        
-                <p> variable global
-            if (true) {
-                var x = 5;
-                        }
-                console.log(x); // x es 5</p>
-                        
-                <p>variable local
-
-                if (true) {
-                    let y = 5;
-                }
-                console.log(y); // ReferenceError: y no está definida</p>
+     <h4>Ejemplo</h4> 
+       <h5>global</h5>
+              <pre><code>
+                let mensajeGlobal = "Soy una variable global";
+                console.log(mensajeGlobal);
+            </code></pre>    
+              <div class="divResultados" id="mensajeGlobalRes"></div>
+              <button class="butJS" onclick="mensajeGlobalB()">ejemplo</button> 
+          
+         <h5>local</h5> 
+           <pre><code>
+               let mensajeLocal= "soy una variable local";
+                console.log(mensajeLocal);
+          </code></pre>
+            <div class="divResultados" id="mensajeLocalRes"></div>
+            <button class="butJS" onclick="mensajeLocalB()">ejemplo</button>
     
-     <h3>asignacion de variables</h3>
-
+  <h3>Asignacion de variables</h3>
         <p>La asignación de valores a una variable se realiza con el operador =:</p>
-        <h3>Ejemplo</h3> 
+          <h5>Ejemplo</h5> 
+            <pre>operador<code>
+                let edad = 30; 
+                let nombre= "juan"; 
 
-        <p> let edad = 30; // asigna 30 a la variable edad//
-            let nombre= "juan" // asigna "juan" a la variable nombre //</p>
-
-    <h3>instancia de una variable</h3> 
-       <p>El concepto de instancia de una variable se refiere a la creación de un valor único o de una estructura de datos que se puede usar. 
-        Aunque el término "instancia" suele asociarse más con objetos y clases (en programación orientada a objetos), 
-        en JavaScript una variable es una "instancia" de un valor en particular en el momento en que se le asigna un valor.</p>
-
-        <h3>Ejemplo</h3> 
-         
-        <p>let persona ={nombre: "juan", edad: 30};</p>
-
- </main>
+                console.log(edad + nombre);
+              
+            </code></pre>
+          <div class="divResultados" id="AsignacionRes"></div>
+        <button class="butJS" onclick="AsignacionB()">ejemplo</button>
+       
+  <h3>Instancia de una variable</h3> 
+       <p>Instanciar objetos en JavaScript se refiere al proceso de crear un nuevo objeto basado
+         en una plantilla o molde predefinido, que generalmente se conoce como una “clase”, Para hacer esto,
+         JavaScript proporciona una palabra clave especial: new.</p>
+      <h3>Ejemplo</h3> 
+          <pre><code>
+            class Libro {
+              constructor(titulo, autor, anioPublicacion) {
+                  this.titulo = titulo;
+                  this.autor = autor;
+                  this.anioPublicacion = anioPublicacion;
+              }
+              obtenerDescripcion() {
+                  return `El libro "${this.titulo}" fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
+              }
+          }
+          let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
+          console.log(miLibro.obtenerDescripcion());
+           </code></pre>
+          <div class="divResultados" id="libroInfoRes"></div>
+        <button class="butJS" onclick="libroInfoB()">ejemplo</button>
+ </section>
+  </main>
        <footer>
         <button class="but"><a href="index.html">Volver al índice</a></button>
     </footer>
@@ -261,8 +282,8 @@
             console.log(edad + nombre);
             }
               
-        class Libro {
-            constructor(titulo, autor, anioPublicacion) {
+            class Libro {
+             constructor(titulo, autor, anioPublicacion){
                 this.titulo = titulo;
                 this.autor = autor;
                 this.anioPublicacion = anioPublicacion;
@@ -270,10 +291,10 @@
             obtenerDescripcion() {
                 return `El libro ${this.titulo} fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
             }
-        }
-        let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
-        document.getElementById('libroInfoRes').innerText = miLibro.obtenerDescripcion();
-        console.log(miLibro.obtenerDescripcion());
+              }
+              let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
+              document.getElementById('libroInfoRes').innerText = miLibro.obtenerDescripcion();
+              console.log(miLibro.obtenerDescripcion());
           </script>
       </body>
 </html>
