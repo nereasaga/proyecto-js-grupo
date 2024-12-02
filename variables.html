@@ -18,272 +18,262 @@
     </nav>
     <header>
     </header>
-  <main>
+ <main>
+  <h2>Variables</h2>
+    <h3>¿Que son las variables?</h3>
+          <p>Una variable en JavaScript es un contenedor de datos que se utiliza para almacenar valores, 
+              como números, cadenas de texto, objetos, entre otros. 
+               En otras palabras, puedes pensar en ella como una caja con un nombre,
+                donde dentro puedes guardar un valor que puedes usar y modificar durante la ejecución de un programa. </p>
+     <h3>Tipos de Variables</h3>
+          <div class="navope">
+            <ul>
+                <li>undefined</li><p>Cuando una variable se ha declarado, pero no se le ha asignado un valor.</p>
+                <li>String</li><p>Contiene secuencias de caracteres, como texto.</p>
+                <li>Boolean</li><p>Representa valores verdadero o falso</p>
+                <li>number</li><p>Almacena valores numéricos, ya sean enteros o decimales.</p>
+                <li>bigint</li><p>Para manejar numeros enteros grandes</p>
+                <li>symbol</li><p>Identificador unico utilizado para propiedades de objetos</p>
+                <li>null</li><p>Indica variable sin valor o vacia</p>
+                <li>funcion</li><p>Es un bloque de codigo que puede ser llamado</p>
+                <li>object</li><p>Estructura de datos que puede contener propiedades y métodos.</p>
+                <li>arrays</li><p>son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar 
+                                   operaciones de recorrido y de mutación.
+                                    Tanto la longitud como el tipo de los elementos de un array son variables.</p>
+             </ul>
+            <p>de estos los siete primeros son considerados primarios</p>
+         </div>
 
-   <h3>Declaracion</h3>
-
-          <p>puedes declarar una variable utilizando las palabras clave let, const o var:
-
-            <p> Var:
-                Ámbito: Global o de función
-                Características: Puede ser redeclarada y reasignada. No respeta el ámbito de bloque.
-              </p>
-            <h3>Ejemplo</h3> 
-    
+ <section>
+   <div class="divEjemplos"></div>
+    <h3>Tipado dinamico</h3>
+      <p>JavaScript es un lenguaje de  tipado dinámico. Las variables en JavaScript
+         no están asociadas directamente con ningún tipo de valor en particular,
+          y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos</p>
+          <h5>number</h5>
               <pre><code>
-                function ejemploVar() {
-                    if (true) {
-                    var nombre = "Juan";
-                    console.log(nombre); // "Juan"
-                    }
-                    console.log(nombre); // "Juan" (a pesar de estar fuera del bloque)
-                    }
-                    
-                    ejemploVar();   
-               </code></pre> 
-            <h4>Explicación </h4>
-                
-               <p>
-                Dentro del bloque if, declaramos var nombre = "Juan";.
-                Aunque está dentro de un bloque {}, var no respeta el ámbito de bloque, sino el de la función.
-                Por eso, nombre es accesible fuera del bloque if, pero sigue siendo parte de la misma función ejemploVar
-                Problema potencial: Si hay otra variable nombre en otro bloque, puede causar conflictos, ya que var no limita el ámbito.
-               </p>
-       
-               <p> Let:
-                  Tiene un ámbito de bloque , lo que significa que solo es accesible dentro del bloque {}donde fue declarado.
-                  let Fue introducido en ES6 como una mejora sobre var.
-              </p>
-            <h3>Ejemplo</h3> 
-    
-              <pre><code>
-                function ejemploLet() {
-                    if (true) {
-                      let edad = 25; // Declarada con `let`, solo accesible dentro del bloque if
-                      console.log(edad); // 25 (dentro del bloque if)
-                    }
-                    // console.log(edad); // Error: `edad` no está definida fuera del bloque if
-                  }
-                  
-                  ejemploLet();  
-               </code></pre> 
-
-            <h4>Explicación </h4>
-                
-               <p>
-                Dentro del bloque if, declaramos let edad = 25; al usar let, la variable queda limitada al bloque donde se declara.
-                Esto ayuda a evitar problemas donde el mismo nombre de variable podría usarse en diferentes bloques.
-              </p>
-
-               <p> const:
-                Ámbito: de bloque
-                Características: se usa para declarar variables que no deben cambiar de valor .
-                Aunque el valor de la variable no puede cambiar, si es un objeto o array , sus propiedades pueden ser modificadas.
-             </p>
-
-            <h3>Ejemplo</h3> 
-    
-              <pre><code>
-                function ejemploConst() {
-                    const pi = 3.1416; // Declarada como constante
-                    console.log(pi); // 3.1416
-                  
-                    // pi = 3.14; // Error: No se puede reasignar
-                  
-                    const persona = { nombre: "Ana", edad: 30 }; // Un objeto declarado como constante
-                    persona.edad = 31; // Modificamos una propiedad del objeto
-                    console.log(persona); // { nombre: "Ana", edad: 31 }
-                  }
-             </code></pre> 
-
-            <h4>Explicación </h4>
-                
-               <p>
-                const pi = 3.1416;Crea una llamada constante pi, cuyo valor no puede cambiar.
-                Intentar reasignar pigenera un error.
-                Sin embargo, para objetos o matrices declarados como const, puedes modificar sus propiedades internas , como cambiar edadde 30 a 31.
-                Úsalo cuando estés seguro de que el valor no debe cambiar,
-             </p>
-              
-      <h3>ambito de variables</h3>
-
-            <p>Cuando declaras una variable fuera de cualquier función, se denomina variable global, 
-            porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función,
-            se llama variable local, porque solo está disponible dentro de esa función.</p>
-
-        <h3>Ejemplo</h3> 
-            
-            <p>Variable global</p>
-
-                 <pre><code>
-                    if (true) { var x = 5;
-                            }
-                   console.log(x); // x es 5
+                    let variable = 42; // Inicialmente es un número
+                    console.log(variable); 
                 </code></pre>
-                            
-           <p>variable local</p>
-
+                <div class="divResultados" id="numberRes"></div>
+                <button class="butJS" onclick="numberB()">ejemplo</button>
+         <h5>string</h5>
                 <pre><code>
-                    if (true) { let y = 5;
-                      }
-                    console.log(y); // ReferenceError: y no está definida 
+                    variable = "Hola"; // Ahora es un string
+                    console.log(variable); 
                 </code></pre>
-      
+                    <div class="divResultados" id="stringRes"></div>
+                    <button class="butJS" onclick="stringB()">ejemplo</button>
+        <h5>boolean</h5>
+                <pre><code>
+                    variable = "true"; // Ahora es un booleano
+                    console.log(variable);
+               </code></pre>
+               <div class="divResultados" id="booleanRes"></div>
+               <button class="butJS" onclick="booleanB()">ejemplo</button>
+           
+ <h3>objetos y arrays</h3>
+     <p>estos dos tipos no nos permiten cambiar el valor 
+        como tal ya que son una coleccion de cosas,
+        pero a traves de la desetructuracion podemos selecionar
+         ciertos valores y propiedades para modificarlos</p>
 
-     <h2>Tipos de Dtaos</h2>
-     
-      <p>El último estándar ECMAScript define ocho tipos de datos:
-        los siete primeros serian datos primitivos
-        
-     <ul>
-      <li>Number</li>
-      <p>almacena valores numericos, enteros o decimales</p>
-      <li>BigInt</li>
-      <p>valores numericos enteros grandes</p>
-      <li>String</li>
-      <p>secuencia de caracteres, como texto</p>
-      <li>Boolean</li>
-      <p>true,false</p>
-      <li>Null</li>
-      <p>la variable no tiene valor o esta vacia</p>
-      <li>Undefined</li>
-      <p>variable declarada sin valor asignado</p>
-      <li>Symbol</li>
-      <p>identificador unico utilizado para propiedades de objetos</p>
+        <h4>ejemplo arrays</h4>
+         <p>los arrays son como listas ordenadas y como tal se gestionan mediante indices diferentes
+             para cada elemento y que por defecto comienza desde el cero, 
+             para acceder a un elemnto hay que referenciar el nombre del array<br> seguido del numero de indice del elmento entre corchetes[] </p>
+          <h5>array</h5>
+            
+            <pre><code>
+              let frutas = ['Manzana', 'Banana', 'Cereza', 'Durazno', 'Uva'];
+              let primeraFruta = frutas[0]; 
+              let terceraFruta = frutas[2]
 
-      <li>Object</li>
-      <p>Un objeto tiene propiedades asociadas a él. Una propiedad de un objeto se puede explicar como una variable adjunta al objeto.
-         Las propiedades de un objeto básicamente son lo mismo que las variables comunes, excepto por el nexo con el objeto. 
-         Las propiedades de un objeto definen las características del objeto. Accedes a las propiedades de un objeto con una simple notación de puntos:.
-     
-         objectName.propertyName;
+              console.log('Primera fruta:', primeraFruta);
+              console.log('Tercera fruta:', terceraFruta);
 
-         o tambien podrias hacerlo a traves de corchetes,
+              let indice = 4;
+              let frutaSeleccionada = frutas[4]; 
+              console.log('Fruta seleccionada dinámicamente:', frutaSeleccionada)
 
-         var myCar = {
-          make: "Ford",
-          model: "Mustang",
-          year: 1969,
-        };
-        
-      </p>
-     
+                
+           </code></pre>
 
+           <div class="divResultados" id="frutasRes"></div>
+           <button class="butJS" onclick="frutasB()">ejmplo</button>
+
+
+      <h4>ejemplo object</h4>
+      <p>los objetos son estructuras de datos que pueden contener
+         propiedades y metodos, se gestionan a traves de palabras clave normalmente 
+         un nombre descriptivo siendo sensibles a mayus/minus,
+          para seleccionar un elemento y una propiedad o metodo utilizamos una notacion de puntos y corchetes .{} </p>
+          <h5>object</h5>
+           <pre><code>
+              let persona = {
+                nombre: 'Juan',
+                edad: 30,
+                profesion: 'Ingeniero',
+                ciudad: 'Madrid'  };
+
+                let nombre = persona.nombre;
+                let profesion = persona.profesion;
+                console.log('Información de la persona:', persona);
+              </code></pre>
+         <div class="divResultados" id="personaRes"></div>
+         <button class="butJS" onclick="personaB()">ejemplo</button>
+    
+
+    <h3>Declaracion de variables</h3>
+        <p>puedes declarar una variable utilizando las palabras clave let, const o var:</p>
+     <h5>let:</h5><p>Se utiliza para declarar variables cuyo valor puede cambiar.</p> 
+            <pre><code>
+               let nombre ="pedro";
+                nombre="Carlos" // el valor puede ser reasignado
+            </code></pre>
+    <h5>const:</h5> <p>Se utiliza para declarar variables cuyo valor no puede cambiar (constantes).</p>
+            <pre><code>
+              const pi = 3.1416;
+              consol.log(pi) // pi= 3.14; // esto daria error, porque el valor no puede cambiar//
+            </code></pre>
    
-   
-         <li>array</li>
-      <p> Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. 
-        Tanto la longitud como el tipo de los elementos de un array son variables.
-        para acceder a estos elementos lo haremos a traves de su indice, teniendo siempre en cuenta que el primer valor por defecto es cero 
-                      
-        let primero = frutas[0]; // Manzana
+   <h5>var (antiguo):</h5>
+          <p> Era el método tradicional, pero hoy se usa menos debido a su comportamiento
+            menos predecible en cuanto a alcance.</p>
+           <pre><code>
+              var edad= 20;
+               edad=21 // se puede reasignar//
+            </code></pre>
 
-       let ultimo = frutas[frutas.length - 1]; // Banana
+ <h3>Ambito de variables</h3>
 
-      </p>
-     </ul>
-      
-    <h3>asignacion de variables</h3>
+        <p>Cuando declaras una variable fuera de cualquier función, se denomina variable global, 
+        porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función,
+         se llama variable local, porque solo está disponible dentro de esa función.</p>
+
+       <h3>Ejemplo</h3> 
+        
+                <p> variable global
+            if (true) {
+                var x = 5;
+                        }
+                console.log(x); // x es 5</p>
+                        
+                <p>variable local
+
+                if (true) {
+                    let y = 5;
+                }
+                console.log(y); // ReferenceError: y no está definida</p>
+    
+     <h3>asignacion de variables</h3>
 
         <p>La asignación de valores a una variable se realiza con el operador =:</p>
-
-         <h3>Ejemplo</h3> 
-            
-         <pre><code>
-             let edad = 30; // asigna 30 a la variable edad//
-            let nombre= "juan" // asigna "juan" a la variable nombre //
-        </code></pre>
-       
-        <p>reasignacion de variables, con let y var Puedes cambiar el valor de una variable en cualquier momento.</p>
-
         <h3>Ejemplo</h3> 
-            
-        <pre><code>
-            let color = "rojo";
-            console.log(color); // "rojo"
 
-            color = "azul"; // Reasignamos un nuevo valor
-            console.log(color); // "azul"
-        </code></pre>
+        <p> let edad = 30; // asigna 30 a la variable edad//
+            let nombre= "juan" // asigna "juan" a la variable nombre //</p>
 
-        <p>const: No puedes reasignar un valor después de declarar una variable con const.
-            Aunque const no permite la reasignación de un objeto o array, sí puedes modificar sus propiedades internas .</p>
-        <h3>Ejemplo</h3> 
-            
-        <pre><code>
-            const persona = { nombre: "Ana", edad: 25 };
-            persona.edad = 26; // Modificamos la propiedad `edad`
-            console.log(persona); // { nombre: "Ana", edad: 26 }
-       </code></pre>
-
-      <h3>Asignación por Valor y Asignación por Referencia</h3>
-    
-       <p> Por valor: Los tipos primitivos (número, cadena, booleano, undefinido, nulo) se copian directamente.
-           Por referencia: Los objetos (incluidos arrays y funciones) comparten una referencia en memoria.</p>
-    
-     <h3>Ejemplo de asignacion por valor</h3>
-    
-     <pre><code>
-        let a = 10;
-        let b = a; // Se copia el valor de `a`
-
-        b = 20; // Cambiamos el valor de `b`, pero `a` no se ve afectado
-        console.log(a); // 10
-        console.log(b); // 20
-    </code></pre>
-
-    <h3>Ejemplo de asignacion por referencia</h3>
-    <pre><code>
-        let objeto1 = { nombre: "Ana" };
-        let objeto2 = objeto1; // Ambos apuntan al mismo objeto en memoria
-
-        objeto2.nombre = "Carlos"; // Cambiamos el nombre a través de objeto2
-        console.log(objeto1.nombre); // "Carlos" (objeto1 también cambió)
-    </code></pre>
-    
-    <h3>Desestructuración en la Asignación</h3>
-    <p>La desestructuración es una forma de extraer valores de objetos o arrays directamente en variables.</p>
-
-    <h3>ejemplo con arrays</h3>
-   
-    <pre><code>
-        let numeros = [10, 20, 30];
-        let [a, b, c] = numeros;
-
-        console.log(a); // 10
-        console.log(b); // 20
-        console.log(c); // 30
-    </code></pre>
- 
-    <h3>ejemplo con object</h3>
-
-    <pre><code>
-        let persona = { nombre: "Ana", edad: 25 };
-        let { nombre, edad } = persona;
-
-        console.log(nombre); // "Ana"
-        console.log(edad); // 25
-    </code></pre>
-
-    
-
-  <h3>instancia de una variable</h3> 
-
+    <h3>instancia de una variable</h3> 
        <p>El concepto de instancia de una variable se refiere a la creación de un valor único o de una estructura de datos que se puede usar. 
         Aunque el término "instancia" suele asociarse más con objetos y clases (en programación orientada a objetos), 
         en JavaScript una variable es una "instancia" de un valor en particular en el momento en que se le asigna un valor.</p>
 
         <h3>Ejemplo</h3> 
          
-        <pre><code>
-        let persona ={nombre: "juan", edad: 30};
-       </code></pre>
+        <p>let persona ={nombre: "juan", edad: 30};</p>
+
  </main>
        <footer>
         <button class="but"><a href="index.html">Volver al índice</a></button>
     </footer>
     <script>
+
+     function numberB() {
+            let variable =42;
+            document.getElementById('numberRes').innerText =  variable;
+            console.log(variable)
+           }
+
+      function stringB() {
+            let variable ="hola";
+            document.getElementById('stringRes').innerText = variable;
+            console.log(variable);
+           }
+        
+     function booleanB() {
+            let variable =true;
+            document.getElementById('booleanRes').innerText = variable;
+            console.log(variable);
+           }
+
+     function frutasB() {
+      let frutas = ['Manzana', 'Banana', 'Cereza', 'Durazno', 'Uva'];
+              let primeraFruta = frutas[0]; 
+              let terceraFruta = frutas[2]
+
+              console.log('Primera fruta:', primeraFruta);
+              console.log('Tercera fruta:', terceraFruta);
+
+              let indice = 4;
+              let frutaSeleccionada = frutas[4]; 
+              document.getElementById('frutasRes').innerText =  frutaSeleccionada;
+              console.log( frutaSeleccionada)
+
+                 }
+
+     function personaB() {
+               let persona = {
+                nombre: 'Juan',
+                edad: 30,
+                profesion: 'Ingeniero',
+                ciudad: 'Madrid'  };
+
+                let nombre = persona.nombre;
+                let profesion = persona.profesion;
+
+                document.getElementById('personaRes').innerText = 
+                `Nombre: ${nombre}, Profesión: ${profesion}`;
+
+                console.log('Información de la persona:', persona);
+                     
+                  }
+
       
-    </script>
-</body>
+          let mensajeGlobal ="soy una variable global";
+         function mensajeGlobalB() {
+            document.getElementById('mensajeGlobalRes').innerText = mensajeGlobal;
+             console.log(mensajeGlobal);
+            
+           }
+
+         function mensajeLocalB() {
+          let mensajeLocal = "Soy una variable local";
+          document.getElementById('mensajeLocalRes').innerText = mensajeLocal;
+          console.log(mensajeLocal);
+       
+            }
+          
+            function AsignacionB() {
+            let edad = 30;
+            let nombre = "juan";
+            document.getElementById('AsignacionRes').innerText = edad + nombre;
+            console.log(edad + nombre);
+            }
+              
+        class Libro {
+            constructor(titulo, autor, anioPublicacion) {
+                this.titulo = titulo;
+                this.autor = autor;
+                this.anioPublicacion = anioPublicacion;
+            }
+            obtenerDescripcion() {
+                return `El libro ${this.titulo} fue escrito por ${this.autor} en el año ${this.anioPublicacion}.`;
+            }
+        }
+        let miLibro = new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967);
+        document.getElementById('libroInfoRes').innerText = miLibro.obtenerDescripcion();
+        console.log(miLibro.obtenerDescripcion());
+          </script>
+      </body>
 </html>

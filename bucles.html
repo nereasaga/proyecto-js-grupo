@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <style>
+    *{
+        list-style: unset;}
     .comp{
         display: flex;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+    }
+    .tabla{
+        margin: 0 auto;
+    }
+    .tabla td{
+        text-align: center;
+        border-bottom: 1px solid black;
     }
 </style>
 <body>
@@ -28,101 +39,155 @@
         <h2>BUCLES</h2>
         <p>En JavaScript, los bucles o iteraciones son estructuras de control que permiten ejecutar un bloque de código de manera repetida, dependiendo de una condición.</p>
         <section><h3>Tipos de Bucles</h3>
-        <ul>
-            <li>For</li>
+            <h5>For</h5>
                 <p>Es el bucle más común y se utiliza cuando sabes de antemano cuántas veces necesitas iterar.</p>
-                <pre id="for">
-                    <code>
-                        for (var i = 0; i < 9; i++){
-                            console.log(i)
-                        }
-                    </code>
-                </pre>
+            <div class="divEjemplos">
+<pre>
+<code>
+for (var i = 0; i < 9; i++){
+        console.log(i)
+    }
+</code>
+</pre> 
+<div class="divResultados" id="forex"></div>
+        <button class="butJS" onclick="forex()">Ejemplo</button>
+            </div>
+           
                 <p>Explicación</p>
                 <ul>
                     <li>var i = 0:</li>
-                    <li>i < 9: La condición que se evalúa antes de cada iteración</li>
-                    <li>i++: Modifica la variable en cada paso</li>
-                </ul>
-            <li>While</li>
+                    <li>i < 9: la condición que se evalúa antes de cada iteración</li>
+                    <li>i++: modifica la variable en cada paso</li>
+                
+            <h5>While</h5>
             <p>Este bucle ejecuta el código mientras una condición sea verdadera. El número de iteraciones no necesita estar predeterminado.</p>
-            <pre>
-                <code>
-                    let i = 1;
-                    while (i<= 5){
-                        console.log(i)
-                        i++
-                    }
-                </code>
-            </pre>
+            <div class="divEjemplos">
+<pre>
+<code>
+    let i = 1;
+    while (i<= 5){
+        console.log(i)
+        i++
+    }
+</code>
+</pre>
+<div class="divResultados" id="whilex"></div>
+                <button class="butJS" onclick="whilex()">Ejemplo</button>
+            </div>
+            
             <p>Explicación</p>
             <ul>
                 <li>let i </li>
-                <li>while (i<= 5): Ejecuta mientras i sea menor que 5</li>
-                <li>i++: Incrementa i en 1</li>
+                <li>while (i<= 5): ejecuta mientras i sea menor que 5</li>
+                <li>i++: incrementa i en 1</li>
             </ul>
-            <li>do...while</li>
+            <h5>do...while</h5>
             <p>Similar al bucle while, pero en este caso la condición se evalúa después de ejecutar el código. Esto asegura que el código se ejecute al menos una vez, incluso si la condición es falsa desde el principio.
             </p>
-            <pre>
-                <code>
-                    let i = 1;
-                    do{
-                        console.log(i);
-                        i++;
-                    } 
-                    while (i<=5);
-                </code>
-            </pre>
+            <div class="divEjemplos">
+<pre>
+<code>
+    let i = 1;
+    do{
+        console.log(i);
+        i++;
+    } 
+    while (i<=5);
+</code>
+</pre>
+            <div class="divResultados" id="dowhilex"></div>
+                <button class="butJS" onclick="dowhilex()">Ejemplo</button>
+            </div>
+            
             <p>Explicación</p>
             <ul>
-                <li>do: Realiza el bucle al menos una vez</li>
-                <li>while (i<=5): Hasta que se cumpla una vez.</li>
+                <li>do: realiza el bucle al menos una vez</li>
+                <li>while (i<=5): hasta que se cumpla una vez.</li>
             </ul>
-            <li>for...in</li>
+            <h5>for...in</h5>
             <p>Este bucle se utiliza para iterar sobre las propiedades de un objeto. Es útil cuando necesitas recorrer las claves de un objeto.</p>
-            <p>
-                EXAMPLE
-            </p>
+            <div class="divEjemplos">
+<pre>
+<code>
+    const persona = { nombre: "Klaus", edad: 25};
+
+    for (let key in persona) {
+        console.log(key);
+        console.log(persona[key]);
+    }
+</code>
+</pre>
+                <div class="divResultados" id="forinex"></div>
+                <button class="butJS" onclick="forinex()">Ejemplo</button>
+            </div>
+            
             <p>Explicación</p>
             <ul>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
+                <li>for (key in person): hace una iteración através de cada key del objeto "person"</li>
+                <li>console.log(key): declara name, age</li>
+                <li>console.log(person[key]): declara Joe, 25</li>
             </ul>
-            <li>for...of</li>
+            <h5>for...of</h5>
             <p>Este bucle se usa para iterar sobre los elementos de un array o cualquier objeto iterable.</p>
-            <p>
-                EXAMPLE
-            </p>
+            <div class="divEjemplos">
+<pre>
+<code>
+    const fruta = ["manzana", "banana", "fresa"];
+    for (let fruta of frutas) {
+        console.log(fruta);
+    }
+</code>
+</pre>
+                <div class="divResultados" id="forofex"></div>
+                <button class="butJS" onclick="forofex()">Ejemplo</button>
+            </div>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
+                <li>for (let fruta of frutas): consigue un value directamente de un array</li>
+                <li>consoloe.log(fruta): declara cada fruta</li>
                 <li>Inicialización:</li>
             </ul>
             <h4>Control de flujo dentro de los bucles</h4>
-            <li>Continue</li>
+            <h5>Continue</h5>
             <p>Omite la iteración actual y continúa con la siguiente.</p>
-            <p>
-                EXAMPLE
-            </p>
+            <div class="divEjemplos">
+<pre>
+<code>
+    for (let i = 0; i < 5; i++){
+        if (i === 3){
+            continue;
+        }
+        console.log(i)
+    }
+</code>
+</pre>
+                <div class="divResultados" id="continuex"></div>
+                <button class="butJS" onclick="continuex()">Ejemplo</button>
+            </div>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
+                <li>if (i === 3): si i es estrictamente igual 3</li>
+                <li>continue: pasa de largo</li>
             </ul>
-            <li>Break</li>
-            <p>ale de un bucle inmediatamente, independientemente de si la condición de continuación se ha cumplido.</p>
-            <p>
-                EXAMPLE
-            </p>
+            <h5>Break</h5>
+            <p>Sale de un bucle inmediatamente, independientemente de si la condición de continuación se ha cumplido.</p>
+            <div class="divEjemplos">
+<pre>
+<code>
+    for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            break; 
+        }
+        console.log(i); // Logs: 0, 1, 2
+        }                      
+</code>
+</pre>
+                <div class="divResultados" id="breakx"></div>
+                <button class="butJS" onclick="breakx()">Ejemplo</button>
+            </div>
             <p>Explicación</p>
             <ul>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
-                <li>Inicialización:</li>
+                <li>break: sale de la iteración cuando i es igual 3</li>
             </ul>
         </ul>
         </section>
@@ -132,17 +197,37 @@
                 <li><p>Un mapa recuerda el orden original de inserción de las llaves.</p></li>
                 <li><p>Se puede añadir <em>"set"</em> y quitar <em>"delete"</em> elementos de un mapa.</p></li>
             </ul>
-            <p>EXAMPLE</p>
+            <div class="divEjemplos">
+<pre>
+<code>
+    const frutas = new Map([
+    ["manzanas", 500],
+    ["bananas", 300],
+    ["naranjas", 200]
+    ])
+
+    let value = frutas.get("manzanas");
+
+</code>
+</pre>
+                <div class="divResultados" id="mapex"></div>
+                <button class="butJS" onclick="mapex()">Ejemplo</button>
+            </div>
+            <p>Explicación</p>
+            <ul>
+                <li>const fruits = new Map([: Crea un nuevo Map</li>
+                <li>let value = fruits.get("apples"): obtiene los valores de "manzanas"</li>
+            </ul>
             <h3>Diferencias entre Maps y Objetos JS</h3>
             <div class="comp">
-                <ul>Maps
+                <ul><p>Maps</p>result
                     <li>Iterable directamente</li>
                     <li>Tiene una propiedad de tamaño</li>
                     <li>Las key puede ser de cualquiertipo de dato</li>
                     <li>Las key están ordenadas por orden de inserción</li>
                     <li>No tiene keys predeterminadas</li>
                 </ul>
-                <ul>Objetos
+                <ul><p>Objetos</p>
                     <li>No se puede iterar directamente</li>
                     <li>No tiene una propiedad de tamaño</li>
                     <li>Las keys deben ser strings o simbolos</li>
@@ -150,7 +235,7 @@
                     <li>Tiene keys predeterminadas</li>
                 </ul>
             </div>
-            <table>
+            <table class="tabla">
                 <tr>
                     <th>Metodo</th>
                     <th>Descripción</th>
@@ -206,11 +291,24 @@
                     <p>No cambia el Map original</p></td>
                 </tr>
             </table>
-            <pre>
-                <code><p>Tiene este aspecto:</p>
-                    map.forEach(callback)
-                </code>
-            </pre>
+            <h5>map.forEach</h5>
+            <div class="divEjemplos">
+<pre>
+<code>
+    const frutas = new Map([
+    ["manzanas", 500],
+    ["bananas", 300],
+    ["naranjas", 200]
+    ])
+
+    frutas.forEach((value, key) => {
+        console.log(key, value);
+    });             
+</code>
+</pre>
+                <div class="divResultados" id="mapforex"></div>
+                <button class="butJS" onclick="mapforex()">Ejemplo</button>
+            </div>
         </section>
     </main>
     <footer>
@@ -218,7 +316,130 @@
     </footer>
     
     <script>
-        
+        function forex(){
+            let element = document.getElementById("forex");
+            element.innerText="";
+            
+            for (let i = 0; i < 9; i++){
+
+                element.innerText += `i: ${i}\n`;
+
+                console.log(i);
+            }
+        }
+        function whilex(){
+            let element = document.getElementById("whilex");
+            element.innerText="";
+            let i=1;
+
+            while (i<=5){
+                
+                element.innerText += `i: ${i}\n`;
+
+                console.log(i)
+                i++
+            }
+        }
+        function dowhilex(){
+            let element = document.getElementById("dowhilex");
+            element.innerText="";
+            let i=8;
+
+            do{
+
+                element.innerText += `i: ${i}\n`;
+
+                console.log(i);
+                i++;
+            }
+            while(i<=5);
+        }
+        function forinex(){
+            let element = document.getElementById("forinex");
+            element.innerText="";
+            
+            const persona={nombre:"Klaus", edad:25};
+            for(let key in persona) {
+                let result = key + " " + (persona[key])
+
+                element.innerText += `${result}\n`;
+
+                console.log(key);
+                console.log(persona[key]);
+            }
+        }
+        function forofex(){
+            let element = document.getElementById("forofex");
+            element.innerText="";
+
+            const frutas = ["manzana", "banana", "fresa"];
+            for (let fruta of frutas) {
+
+                element.innerText += `${fruta}\n`;
+            
+                console.log(fruta);
+            }
+        }
+        function continuex(){
+            let element = document.getElementById("continuex");
+            element.innerText="";
+
+            for (let i=0; i<5;i++){
+                
+                if (i===3){
+                    continue;
+                }
+
+                element.innerText += `i: ${i}\n`;
+                console.log(i);
+            }
+        }
+        function breakx(){
+            let element = document.getElementById("breakx");
+            element.innerText="";
+
+            for (let i = 0; i < 5; i++) {
+                if (i === 3) {
+                break;
+                }
+
+                element.innerText += `i: ${i}\n`;
+                console.log(i);
+            }
+        }
+        function mapex(){
+            let element = document.getElementById("mapex");
+            element.innerText="";
+
+            const frutas = new Map([
+                    ["manzanas", 500],
+                    ["bananas", 300],
+                    ["naranjas", 200]
+                    ])
+
+            let value = frutas.get("manzanas");
+
+            element.innerText += `i: ${value}\n`;
+
+            console.log(value)
+        }
+        function mapforex() {
+            let element = document.getElementById("mapforex");
+            element.innerText="";
+
+            const frutas = new Map([
+                ["manzanas", 500],
+                ["bananas", 300],
+                ["naranjas", 200]
+                ]);
+
+                frutas.forEach((value, key) => {
+                    let result = key + " " + value;
+                    
+                    element.innerText += `${result}\n`;
+                    console.log(key, value);
+            });
+            }
     </script>
 </body>
 </html>
