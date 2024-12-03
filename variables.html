@@ -50,12 +50,13 @@
          </div>
   
 <section>
-   <div class="divEjemplos"></div>
+   
       <h3>Tipado dinamico</h3>
         <p>JavaScript es un lenguaje de  tipado dinámico. Las variables en JavaScript
           no están asociadas directamente con ningún tipo de valor en particular,
             y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos</p>
-            <h5>number</h5>
+            <div class="divEjemplos">
+              <h5>number</h5>
                 <pre><code>
                       let variable =42 ; 
                      
@@ -76,6 +77,7 @@
                 </code></pre>
               <div class="divResultados" id="booleanRes"></div>
               <button class="butJS" onclick="booleanB()">ejemplo</button>
+            </div>
             
       <h3>objetos y arrays</h3>
           <p>estos dos elementos no nos permiten cambiar el valor 
@@ -87,7 +89,8 @@
             <p>los arrays son como listas ordenadas y como tal se gestionan mediante indices diferentes
                 para cada elemento y que por defecto comienza desde el cero, 
                 para acceder a un elemnto hay que referenciar el nombre del array<br> seguido del numero de indice del elmento entre corchetes[] </p>
-              <h5>array</h5>
+              <div class="divEjemplos">
+                <h5>array</h5>
             
             <pre><code>
               let frutas = ['Manzana', 'Banana', 'Cereza', 'Durazno', 'Uva'];
@@ -104,6 +107,7 @@
 
             <div class="divResultados" id="frutasRes"></div>
             <button class="butJS" onclick="frutasB()">ejmplo</button>
+          </div>
 
 
        <h4>ejemplo object</h4>
@@ -111,6 +115,7 @@
             propiedades y metodos, se gestionan a traves de palabras clave normalmente 
             un nombre descriptivo siendo sensibles a mayus/minus,
               para seleccionar un elemento y una propiedad o metodo utilizamos una notacion de puntos y corchetes .{} </p>
+              <div class="divEjemplos">
               <h5>object</h5>
               <pre><code>
                 let persona = {
@@ -125,6 +130,7 @@
                 </code></pre>
           <div class="divResultados" id="personaRes"></div>
           <button class="butJS" onclick="personaB()">ejemplo</button>
+        </div>
       
 
      <h3>Declaracion de variables</h3>
@@ -156,6 +162,7 @@
             se llama variable local, porque solo está disponible dentro de esa función.</p>
 
         <h4>Ejemplo</h4> 
+        <div class="divEjemplos">
          <h5>global</h5>
               <pre><code>
                 let mensajeGlobal = "Soy una variable global";
@@ -171,22 +178,26 @@
           </code></pre>
             <div class="divResultados" id="mensajeLocalRes"></div>
             <button class="butJS" onclick="mensajeLocalB()">ejemplo</button>
+          </div>
     
        <h3>Asignacion de variables</h3>
         <p>La asignación de valores a una variable se realiza con el operador =:</p>
           <h5>Ejemplo</h5> 
+          <div class="divEjemplos">
             <pre>operador<code>
                 let edad = 30; 
                 let nombre= "juan"; 
             </code></pre>
             <div class="divResultados" id="AsignacionRes"></div>
           <button class="butJS" onclick="AsignacionB()">ejemplo</button>
+        </div>
        
        <h3>Instancia de una variable</h3> 
           <p>Instanciar objetos en JavaScript se refiere al proceso de crear un nuevo objeto basado
             en una plantilla o molde predefinido, que generalmente se conoce como una “clase”, Para hacer esto,
             JavaScript proporciona una palabra clave especial: new.</p>
        <h3>Ejemplo</h3> 
+       <div class="divEjemplos">
           <pre><code>
             class Libro {
               constructor(titulo, autor, anioPublicacion) {
@@ -203,6 +214,7 @@
            </code></pre>
            <div class="divResultados" id="libroInfoRes"></div>
        <button class="butJS" onclick="libroInfoB()">ejemplo</button>
+      </div>
    </section>
  </main>
    <footer>
